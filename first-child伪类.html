@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	p{
+		font-size: 16px;
+		color: #000;
+	}
+	<-------第一个p标签---------->
+	p:first-child{
+		color: aqua;
+	}
+	<-------每个p标签里的第一个span标签---------->
+	p>span:first-child{
+		color: aqua;
+	}
+	<-------第一个p标签的所有span标签---------->
+	p:first-child span{
+		color: aquamarine;
+	}
+	
+	
+	ul{
+		width: 904px;
+		height: 46px;
+		background-color: #1d3b5e;
+		padding: 0 20px;
+		border-radius: 3px 3px 0 0;
+	}
+	ul li{
+		list-style: none;
+		width:144px;
+		height: 46px;
+		text-align: center;
+		line-height: 46px;
+		color: #fff;
+		float: left;
+		border-left: 1px solid #445160;
+	}
+	ul li:first-child{
+		border: none;
+	}
+</style>
+</head>
+
+<body>
+<p>哈喽<span>大家好</span>，我是<span>M</span></p>
+<p>哈喽<span>大家好</span>，我是<span>M</span></p>
+<p>哈喽<span>大家好</span>，我是<span>M</span></p>
+
+<ul>
+<li>首页</li>	
+<li>新闻中心</li>	
+<li>行业动态</li>	
+<li>服务支持</li>	
+<li>关于我们</li>	
+	
+</ul>
+	
+</body>
+</html>

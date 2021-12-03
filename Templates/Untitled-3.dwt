@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- TemplateBeginEditable name="doctitle" -->
+	<title>无标题文档</title>
+	<!-- TemplateEndEditable -->
+	<!-- TemplateBeginEditable name="head" -->
+	<!-- TemplateEndEditable -->
+	<style>
+		.logo-wrap {
+			  margin: 0;
+			  color: #fff;
+			  font-weight: 600;
+			  line-height: 58px;
+			  font-size: 14px;
+			  font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+			  vertical-align: middle;
+			  padding: 0px 5px;
+			  min-width: 200px;
+		}
+		.float-wrap img {
+			max-width: 30px;
+			margin-bottom: -10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="logo-wrap">
+		<div class="float-wrap">
+			<div class="left">
+				<img src="/static/admin/simpleui-x/img/logo.png" alt="LOGO">
+			</div>
+			<div class="left">
+				<span>测试部门
+				</span>
+			</div>
+		</div>
+	</div>
+<div style="text-align:lift;">Test</div>
+<div>此处显示新 Div 标签的内容</div>
+</body>
+</html>

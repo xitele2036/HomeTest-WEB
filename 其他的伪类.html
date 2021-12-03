@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	p {
+		font-size: 16px;
+		color: #000;
+	}
+	/****************第一字********************/
+/*
+	p:first-letter{
+		font-size: 20px;
+		color: #F11418;
+	}
+*/
+	/**********第一排**********************/
+	p:first-line{
+		font-size: 22px;
+		font-weight: bold;
+	}
+	/**********选中的样子（注意：两个冒号）*********************/
+	p::selection{
+		background-color: #E79FA8;
+	}
+	ul{
+		width: 100%;
+		padding: 0;
+	}
+	ul li{
+		width: 100%;
+		height: 30px;
+		list-style: none;
+		background-color: #D0F5E1;
+		margin: 3px;
+	}
+	/***控制第n个标签，2n是偶数，2n+1是奇数**/
+	ul li:nth-child(2n+1){
+		background-color: #B78A8B
+	}
+</style>
+</head>
+
+<body>
+<p>由于本人的水平有限，在写作的过程中难免有误，请细心的同学帮我指出</p>
+	
+<p>这里从互联网的发展来介绍了web布局的几种常见方式</br>，每种方式都有它的优缺点，每种方式也都有它存在的历史意义，</br>可能有些布局我们已经不使用或者不推荐了，这是因为有了更好的布局方式（如语义化布局），</br>也许我今天介绍的几种布局方式将来也会成为历史的产物，但是这些布局方式在存在的时间里实现了自己的价值，这就够了。我希望屏幕前的你看到这篇文章之后，能够对web布局方式有较清晰的理解，能够在布局的时候选出最合适的、并且知道坑在哪里，那我便会非常欣慰。</p>
+
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+
+</ul>
+
+
+
+
+</body>
+</html>
