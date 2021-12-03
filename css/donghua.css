@@ -180,6 +180,51 @@
 }
 
 
+/*******浏览器大于1001*********/
+@media screen and (min-width:1001px){
+	.box{
+		width: 33.33%;
+	}
+}
+
+/*******浏览器小于1000大于651*********/
+@media screen and (max-width:1000px) and (min-width:651px){
+	.box{
+		width: 50%;
+	}
+}
+/*******浏览器小于650*********/
+@media screen and (max-width:650px){
+	.box{
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
