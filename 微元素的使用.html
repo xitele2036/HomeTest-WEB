@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	a{
+		text-decoration: none;
+	}
+	a::before{
+		content:url("images/chanpin3.png");
+	}
+	a::after{
+		content: attr(href);
+		margin-left: 33px;
+	}
+	
+	.bigbox{
+		width: 312px;
+		height: 72px;
+	}
+	.touxiang{
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		overflow: hidden;
+		background: url("images/chanpin3.png") no-repeat -100px -180px;
+		display: inline-block;
+	}
+	.liaotiankuang{
+		width: 234px;
+		height: 60px;
+		background-color: #fff;
+		border: 1px solid #ababab;
+		border-radius: 10px 10px 10px 0;
+		float: right;
+		margin-top: 12px;
+	}
+	.liaotiankuang::before{
+		content: url("images/DS/img/logo.png");
+		position: absolute;
+		left: -28px;
+	}
+</style>
+</head>
+
+<body>
+<a href="https://www.runoob.com/">菜鸟教程</a>
+	
+<div class="bigbox">
+	<div class="touxiang"></div>
+	<div class="liaotiankuang"></div>
+</div>
+</body>
+</html>
