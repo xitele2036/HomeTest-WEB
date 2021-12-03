@@ -1,0 +1,186 @@
+/* CSS Document */
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*公共的p标签过度样式*/
+.box:hover .wenzi p,
+.box:hover .wenzi h4,
+.suofang:hover .wenzi .kuang{
+	transition: all 2s ease-in;
+}
+
+
+.box{
+	width: 33%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+.wenzi{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.pingyi{
+	background-color: #130700;
+}
+.pingyi .wenzi{
+	padding: 20px;
+	color: #fff;
+}
+.pingyi .wenzi p{
+	color: #666;
+	background-color: #fff;
+	margin-top: 5px;
+	transform: translate(-300px);
+}
+.box:hover img{
+	opacity: 0.7;
+/*	transition: all 2s ease-in;*/
+}
+.pingyi:hover .wenzi p{
+	transform: translate(0);
+/*	transition: all 2s ease-in;*/
+}
+.pingyi:hover .wenzi p:nth-of-type(1){
+	transition-delay: 0.1s;
+}
+.pingyi:hover .wenzi p:nth-of-type(2){
+	transition-delay: 0.2s;
+}
+.pingyi:hover .wenzi p:nth-of-type(3){
+	transition-delay: 0.3s;
+}
+.pingyi:hover .wenzi p:nth-of-type(4){
+	transition-delay: 0.4s;
+}
+
+
+.xuanzhuan{
+	background-color: #0f0000;
+	
+}
+/*
+.xuanzhuan:hover img{
+	opacity: 0.7;
+	transition: all 2s ease-in;
+}
+*/
+
+.xuanzhuan .wenzi{
+	width: 100%;
+	height: 100%;
+/*	padding: 20px;*/
+	color: #fff;
+}
+.xuanzhuan .wenzi h4{
+	margin-top: 15%;
+	margin-left: 15%;
+}
+.xuanzhuan .wenzi p{
+	margin-top: 5%;
+	margin-left: 15%;
+	transform: translate(0,100px);
+	opacity: 0;
+}
+.xuanzhuan .wenzi .kuang{
+	width: 80%;
+	height: 80%;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	transform: translate(0,-300px) rotate(0deg);
+}
+.xuanzhuan:hover .kuang{
+	transform: translate(0,0) rotate(360deg);
+	transition: all 2s ease-in;
+}
+.xuanzhuan:hover .wenzi p{
+	transform: translate(0,0);
+	opacity: 1;
+/*	transition: all 2s ease-in;*/
+}
+
+
+.xieqie{
+	background-color: #0f0000;	
+}
+.xieqie .wenzi{
+	top: 30%;
+	left: 15%;
+	color: #fff;
+}
+.xieqie .wenzi p{
+	margin-top: 5px;
+	transform: skew(90deg);
+}
+.xieqie .wenzi h4{
+	transform: skew(90deg);
+}
+.xieqie:hover .wenzi h4,
+.xieqie:hover .wenzi p{
+	transform: skew(0deg);
+/*	transition: all 2s ease-in;*/
+}
+
+
+.suofang{
+	background-color: #0f0000;	
+}
+
+.suofang .wenzi{
+	width: 100%;
+	height: 100%;
+}
+
+.suofang .wenzi h4{
+	margin-top: 15%;
+	margin-left: 15%;
+	color: #FFF;
+	font-weight: bold;
+	position: relative;
+	transform: scale(1.2,1.2);
+	opacity: 0;
+}
+
+.suofang .wenzi p{
+	margin-top: 5%;
+	margin-left: 15%;
+	color: #FFF;
+	transform: scale(1.2,1.2);
+	opacity: 0;
+}
+.suofang .wenzi .kuang{
+	width: 80%;
+	height: 80%;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	transform: scale(1.2,1.2);
+	opacity: 0;
+}
+
+.suofang:hover img{
+	transform: scale(1.1,1.1);
+}
+.suofang:hover .wenzi h4,
+.suofang:hover .wenzi p{
+	transform: scale(1);
+	opacity: 1;
+}
+
+.suofang:hover .wenzi .kuang{
+	transform: scale(1);
+	opacity: 1;
+}
+
+
+
+
+
+
