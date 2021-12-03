@@ -4,22 +4,27 @@
 <meta charset="utf-8">
 <title>无标题文档</title>
 <style>
+	/*默认的样式清除*/
 	body{
 		padding: 0;
 		margin: auto;
 		font-size: 12px;
 	}
+	/*导航背景，黄色区域*/
 	.bj{
 		width: 100%;
 		height: 40px;
 		background-color: #ffd200;
+		margin: 15px 0 0;
 	}
+	/*导航部分，ul标签*/
 	.nav{
 		width: 560px;
 		height: 40px;
 		margin: 0 auto;
 		padding: 0;
 	}
+	/*导航的每一个小栏目*/
 	.nav li{
 		list-style: none;
 		width: 70px;
@@ -30,6 +35,7 @@
 		position: relative;
 		z-index: 9;
 	}
+	/*鼠标移入时的背景*/
 	.nav li::before{
 		content: "";
 		width: 68px;
@@ -42,12 +48,119 @@
 		z-index: -99;
 		display: none;
 	}
-	.nav li:hover::before{
+	/*第一个li标签的伪元素*/
+	.nav li:first-child::after{
+		content: url("images/sanjiao.png");
+		position: absolute;
+		top: -24px;
+		left: 31px;
+		display: none;
+	}
+	
+/*
+	.nav li:hover::after{
+		display: block;
+	}
+	
+*/
+	/*鼠标移入时，控制背景和三角形*/
+	.nav li:hover::before,
+	.nav li:hover::after,
+	.nav li:hover .tanchuang
+	{
 		display: block;
 		
 	}
+	/*鼠标移入时改变里标签的字体颜色*/
 	.nav li:hover{
 		color: white;
+	}
+	.banner{
+		margin: 0;
+		width: 100%;
+		height: 300px;
+		background-color: #15B0A9;
+	}
+	.tanchuang{
+		width: 450px;
+		height: 148px;
+		background-color: #fff;
+		color: #333;
+		display: none;
+	}
+	.top{
+		width: 100%;
+		height: 45px;
+		border-bottom: 1px solid #e8e8e8;
+		
+	}
+	.top p{
+		float: left;
+		font-size: 14px;
+		margin: 0 0 0 15px;
+	}
+	.top span{
+		font-size: 12px;
+		color: #999999;
+		margin-left: 22px;
+	}
+	.but{
+		float: right;
+		width: 100px;
+		height: 30px;
+		border-radius: 3px;
+		color: #fff;
+		text-align: conter;
+		line-height: 30px;
+		font-size: 12px;
+		background-color: #ff7c00;
+		margin: 7px 15px 0 0;
+		cursor: pointer;
+	}
+	.content{
+		width: 100%;
+		height: 102px;
+		
+	}
+	.left{
+		float: left;
+		width: 60px;
+		text-align: center;
+		font-size: 12px;
+		color: #333;
+	}
+	.right{
+		float: left;
+		width: 390px;
+		padding-top:7px;
+		text-align: center;
+	}
+	.right span{
+		float: left;
+		height: 26px;
+		line-height: 26px;
+		margin-left: 20px;
+		color: #666666;
+		position: relative;
+		padding: 0 5px;
+		cursor: pointer;
+		text-align: center;
+	}
+	.right span:first-child::before{
+		content: "";
+		width: 1px;
+		height: 12px;
+		background-color: #e8e8e8;
+		position: absolute;
+		top: 7px;
+		left: -10px;
+	}
+	.right span:hover{
+		content: "";
+		width: auto;
+		border-radius: 13px;
+		background-color: #f8f8f8;
+		color: #ff8300;
 	}
 </style>	
 
@@ -56,7 +169,40 @@
 <body>
 <div class="bj">
 	<ul class="nav">
-		<li>软件入门</li>
+		<li>软件入门
+			<div class="tanchuang">
+				<div class="top">
+				 	<p>软件入门<span>2333人已学习</span></p>
+					<div class="but">为自己充值</div>
+				</div>
+				<div class="content">
+					<div class="left">基础</div>
+					<div class="right">
+						<span>PS</span>
+						<span>AI</span>
+						<span>DW</span>
+						<span>PY</span>
+						<span>JA</span>
+						<span>MAYA</span>
+						<span>AU</span>
+						<span>PS</span>
+						<span>MATA</span>
+						<span>DW</span>
+						<span>PYaaaaaaaa</span>
+						<span>Python</span>
+						<span>C+</span>
+						<span>AU</span>
+					</div>
+					<div class="left">练习</div>
+					<div class="right">
+						<span>PS练习</span>
+						<span>AI练习</span>
+						<span>DW练习</span>
+						
+					</div>
+				</div>
+			</div>
+		</li>
 		<li>字体设计</li>
 		<li>海报设计</li>
 		<li>C4D教程</li>
@@ -66,5 +212,6 @@
 		<li>系列课</li>
 	</ul>	
 </div>
+<div class="banner"></div>
 </body>
 </html>
