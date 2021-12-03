@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	body{
+		padding: 0;
+		margin: auto;
+		font-size: 12px;
+	}
+	.bj{
+		width: 100%;
+		height: 40px;
+		background-color: #ffd200;
+	}
+	.nav{
+		width: 560px;
+		height: 40px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.nav li{
+		list-style: none;
+		width: 70px;
+		height: 40px;
+		float: left;
+		text-align: center;
+		line-height: 40px;
+		position: relative;
+		z-index: 9;
+	}
+	.nav li::before{
+		content: "";
+		width: 68px;
+		height: 28px;
+		background-color: #edaf1a;
+		border-radius: 14px;
+		position: absolute;
+		top:6px;
+		left: 1px;
+		z-index: -99;
+		display: none;
+	}
+	.nav li:hover::before{
+		display: block;
+		
+	}
+	.nav li:hover{
+		color: white;
+	}
+</style>	
+
+</head>
+
+<body>
+<div class="bj">
+	<ul class="nav">
+		<li>软件入门</li>
+		<li>字体设计</li>
+		<li>海报设计</li>
+		<li>C4D教程</li>
+		<li>图像合成</li>
+		<li>综合设计</li>
+		<li>产品精修</li>
+		<li>系列课</li>
+	</ul>	
+</div>
+</body>
+</html>
