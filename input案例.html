@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>input案例</title>
+<style>
+	.line{
+		margin-top:20px; 
+		width: 170px;
+		display: block;
+	}	
+	.line .shuru{
+		width: 100px;
+		height: 20px;
+		border: 1px solid #0075d2;
+		border-radius: 3px;
+		padding-left: 3px;
+	}
+	.line .chongzhi{
+		width: 50px;
+		height: 20px;
+		border: 1px solid #0075d2;
+		border-radius: 3px;
+		color: #0075d2;
+		background: #fff;
+		float: left;
+	}	
+	.line .tijiao{
+		width: 50px;
+		height: 20px;
+		border-radius: 3px;
+		color: #fff;
+		background: #0075d2;
+		float: right;
+		border: 0;
+	}
+	.line .danxuan{
+		opacity: 0;
+		margin: 0;
+	}
+	.line .yangshi{
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		border: 1px solid #b7b7b7;
+		display: inline-block;
+		cursor: pointer;
+		
+	}
+	.line .on{
+		border: 0;
+		background: #0075d2;	
+	}
+</style>
+</head>
+
+<body>
+<form action="">
+	<div class="line">
+		<span>账号:</span>
+		<input type="text" class="shuru">
+	</div>
+	<div class="line">
+		<span>密码:</span>
+		<input type="password" class="shuru">
+	</div>
+	<div class="line">
+		<span>性别：</span>
+		<span>男</span>
+		<span class="yangshi">
+			<input type="radio" name="1" class="danxuan">
+		</span>
+		
+		<span>女</span>
+		<span class="yangshi">
+			<input type="radio" name="1" class="danxuan">
+		</span>
+	</div>
+	<div class="line">
+		<input type="reset" class="chongzhi">
+		<input type="submit" class="tijiao">
+	</div>
+</form>
+</body>
+</html>

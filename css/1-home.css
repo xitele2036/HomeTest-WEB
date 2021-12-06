@@ -5,7 +5,7 @@
 	padding: 0;
 	margin: 0;
 	font-size: 12px;
-	list-style: none;
+	list-style: none; 
 	font-family: "Helvetica";
 }
 
@@ -30,7 +30,7 @@
 }
 
 .topBJ .top li:first-child {
-	float: left;
+	float: left; /*左浮动*/
 }
 
 .topBJ .top .mouse:hover {
@@ -41,12 +41,12 @@
 	width: 60px;
 	background: #00c8c8;
 	color: #fff;
-	padding-left: 50px;
-	position: relative;
+	padding-left: 50px;/*左填充*/
+	position: relative; /*相对定位*/
 }
 
 .topBJ .top .gouwuche img {
-	position: absolute;
+	position: absolute; /*绝对定位*/
 	left: 20px;
 	top: 10px;
 }
@@ -62,13 +62,13 @@
 	width: 1300px;
 	height: 100%;
 	line-height: 80px;
-	margin: 0 auto;
+	margin: 0 auto;/*页边距*/
 }
 
 .navBJ .nav li {
 	width: auto;
 	float: left;
-	cursor: pointer;
+	cursor: pointer;/*鼠标移入出现小手*/
 	padding: 0 20px;
 }
 
@@ -89,7 +89,7 @@
 	border: 1px solid #ececec;
 	color: #adadad;
 	padding-left: 5px;
-	background: url(../img/glass.png) no-repeat 125px 6px;
+	background: url(../images/glass.png) no-repeat 125px 6px;
 }
 .navBJ .nav li:first-child {
 	margin-right: 363px;
@@ -103,7 +103,7 @@
 	content: "";
 	width: 6px;
 	height: 4px;
-	background-image: url(../img/jiaobiao.png);
+	background-image: url("../images/jiaobiao.png");/*背景图*/
 	position: absolute;
 	left: 12px;
 	top: 50px;
@@ -116,7 +116,7 @@
 	height: 350px;
 	padding: 22px;
 	position: absolute;
-	box-shadow: 0 5px 20px #a0a0a0;
+	box-shadow: 0 5px 20px #a0a0a0;  /*投影*/
 	display: none;
 	background: #fff;
 }
