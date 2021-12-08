@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<!--
+		变量使用时的注意事项
+		1.如果重复定义变量，那么后面定义的变量表示对变量的重新赋值
+		2.如果定义变量时不加var，那么这个变量就是给window对象添加一个属性。
+		3.变量声明提升
+		4.let与var的区别：
+			let定义的变量必须是在定义之后使用，不可以在定义之前使用
+			let定义的变量只能在块级作用域下面使用
+	-->
+	<script>
+//		var num=1000;
+//		num=2000;//JS中定义变量时变量名称可以相同，名称相同会覆盖之前的值
+//		
+//		console.log(num);
+//		
+//		a = 'hello';//相当于给window对象添加属性，这个a是一个全局变量
+		
+//		if(3>2){
+//			var nam = 100;
+//		}
+//		console.log(nam);
+//		
+//		'use strict';//严格模式 必须遵守js语法
+		num = 10;
+		console.log(num);
+	</script>
+</body>
+</html>

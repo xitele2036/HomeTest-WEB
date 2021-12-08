@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		//求两个数的和
+		//变量：在内存当中开辟出来用来存储数据的存储空间
+		//变量的定义：var 变量名称; 全局变量
+		//			let 变量名称; 局部变量
+		//			var 变量名称1，变量名称2，变量名称3;
+		//变量初始化： var 变量名称 = 值;
+		//变量的赋值：1.定义变量 var num; 2.为变量赋值 num = 值;
+		//定义变量的隐式方式：变量名称 = 值;
+		
+		//变量储存复杂的数据----对象：var obj = {a:1,b:2};
+		var num1,num2,sum;
+		var salary;
+		var age;
+		var ha = 1000;
+		
+		//let输入局部变量
+		let nums;
+		let salary1;
+		let ageq;
+		
+		//字面量:程序当中固定的值
+		
+		//数字字面量
+		num1 = 10;
+		num2 = 20;
+		//字符串字面量
+		name = 'tom';
+		
+		sum = num1+ num2;
+		console.log(sum);
+		
+		var numa = 100;//变量储存基本类型的数据，数据储存在栈中
+		
+		var obj = {//变量储存引用类型的数据， 数据储存在堆中，地址引用存储在栈中
+			a:1,
+			b:2
+		};
+		console.log(numa);
+		console.log(obj);
+		
+		
+		
+	</script>
+</body>
+</html>

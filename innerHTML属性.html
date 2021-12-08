@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<!---innerHTML属性属于DOM操作的，作用是设置或获取页面元素的内容的-->
+	<ul>
+		<li>我是第1个li</li>
+		<li>我是第2个li</li>
+		<li id="box">我是第3个li</li>
+		<li>我是第4个li</li>
+		<li>我是第5个li</li>
+	</ul>
+	
+	<script>
+		//获取ID为box的li
+		var li = document.getElementById('box');
+		
+		//获去li中的内容
+		console.log(li.innerHTML);
+		
+		//设置li中的内容
+		li.innerHTML = 'helloworld';
+	</script>
+</body>
+</html>

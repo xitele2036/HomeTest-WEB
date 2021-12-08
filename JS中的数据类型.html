@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<!--
+	JS中能处理的数据类型
+	基本数据类型：
+		1.数据型（number型）：正数，负数，整数，小数，0，NaN，Infinity，-Infinity
+		2.字符型（String型）
+		3.布尔型（Boolean型）
+		4.Undefined
+		5.Null
+	引用数据类型：
+		1.数组
+		2.对象
+		3.函数
+---->
+	<script>
+		var num;
+		
+		num = 100;
+		num = 0;
+		 
+		num = 0123;//八进制，以0开头，构成要素0-7
+		
+		num = 0XFFF;//八进制，以0X开头，构成要素0-9a-f
+		
+		//NaN：Not a Number:以表示运算结果不是一个数值
+		//NaN和其他任何数据运算时结果都是NaN
+		//可以使用isNaN方法测试参数是否为NaN，格式：isNaN（数据）；如果返回值为true，则表示数据是NaN，否则不是
+		num = 'a'*1;
+		console.log(num);
+		console.log(isNaN(num));
+		//Infinity(正无穷)，-Infinity（负无穷）
+		//JS中能表示的数据范围，Number.MAX_VALUE 最大值|Number.MIN_VALUE 最小值
+		console.log(Number.MAX_VALUE);
+		console.log(Number.MIN_VALUE);
+		
+		console.log(3/0);
+		console.log(-3/0);
+		
+		//浮点数：小数最多为17位
+		//JS中不要拿浮点数做比较，不准确
+	</script>
+</body>
+</html>
