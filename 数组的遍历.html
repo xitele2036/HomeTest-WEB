@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+		数组的遍历
+		1.for循环
+		for(var i=0; i<数组.length; i++){
+			循环体;
+		}
+		
+		2.for in 循环：主要用来遍历数组的下标或对象的属性
+		for(var i in 数组名称){//i表示下标
+			循环体：
+		}
+		
+		3.for of循环：遍历数组的值，没有下标
+		for(var i of 数组名称){
+			循环体：
+		}
+		
+		4.forEach方法:该方法是数组对象的一个方法，可以用来遍历数组的值和下标
+		数组名称.forEach(function(ele,index){
+				ele表示数组的值，index表示数组的下标
+		})
+		*/
+		
+		var arr = [1,2,3,4,5,6,7,8,9];
+		
+		for(var i=0; i<arr.length; i++){
+			console.log(arr[i]);
+		}
+		
+		console.log('------------------');
+		
+		for(var i in arr){
+//			console.log(i);
+			console.log(i+'----'+arr[i]);
+		}
+		
+		
+		console.log('------------------');
+		
+		for(var ele of arr){
+//			console.log(i);
+			console.log(ele);
+		}
+		
+		console.log('------------------');
+		arr.forEach(function(ele,index){
+			console.log(ele+'------'+index);
+		})
+	</script>
+</body>
+</html>

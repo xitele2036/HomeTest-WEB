@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		var arr = [1,2,3,4,5,5];
+		var num = 100;
+		
+		//值传递：就是将某个数据的拷贝传递给其他元素，让他操作，但是操作不影响原有数据
+		num = arr[0];
+		num = 100;
+		console.log(arr[0]);
+		//地址传递：就是将某个数据在堆中的地址传递给其他元素操作，操作影响原始数据
+		num = arr;
+		num[0] = 100;
+		console.log(arr[0]);
+		
+	</script>
+</body>
+</html>

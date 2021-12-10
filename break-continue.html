@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>break-coninue</title>
+</head>
+
+<body>
+	<script>
+		/*
+		break:
+		使用范围:switch,循环语句
+		作用：
+			1.如果位于switch中，那么他的作用就是跳出switch结构
+			2.如果位于循环当中，它的作用就是终止循环（break后面不论剩余多少语句，都不执行）
+		
+		continue:
+		使用范围：循环结构
+		作用：
+			1.结束循环，进行下一次循环
+		*/
+		
+		for(var i=1; i<=10; i++){
+			console.log(i);
+			break;
+		}
+		
+		for(var i=1; i<=10; i++){
+			if(i==5){
+			   continue;
+			   }
+			console.log(i);
+		}
+		
+	</script>
+</body>
+</html>

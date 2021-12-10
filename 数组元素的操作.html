@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+		数组元素的操作
+			1.增:为数组增加新的元素（JS里的数组长度是可变的）
+				1.方式1：
+			2.删:删除数组中的元素，格式：delete 数组名称[下标]
+			3.改:更改数组中的元素，格式：数组名称[下标]=新值
+			4.查:获取元素，格式：数组名称[下标]
+		*/
+		//查
+		var arr = [1,2,3,4,5,6,7,8,9,0];
+		console.log(arr[0]);
+		console.log(arr[9]);
+		console.log(arr[5]);
+		console.log(arr[5] + arr[8]);
+		
+//		删
+		delete arr[8];
+		console.log(arr)
+		
+//		改
+		arr[10]=100;
+		arr[20]=200;
+		arr[30]=300;
+		console.log(arr);
+		
+//		增
+		console.log(arr.length);
+		arr.length=200;
+		console.log(arr);
+		
+	</script>
+</body>
+</html>
