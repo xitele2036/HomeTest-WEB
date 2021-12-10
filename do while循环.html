@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		//do while:先执行一边循环体，再判断，如果成立继续执行
+		
+		//打印5个hello
+		var i = 1;
+		do{
+			console.log('hello');
+			i++
+		}while(i<=5);
+		
+		//打印10个数
+		var i = 1;
+		do{
+			console.log(i);
+			i++
+		}while(i<=10);
+		
+		//打印100以内偶数相加
+		var i = 1;
+		var sum = 0;
+		do{
+			if(i%2==0){
+				sum = sum + i;
+			}
+
+			i++;
+		}while(i<=100);
+		console.log(sum);
+		
+		//do while至少执行一遍，而for ，while一遍也不执行
+	</script>
+</body>
+</html>

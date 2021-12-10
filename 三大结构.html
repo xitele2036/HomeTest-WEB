@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+		//编程语言的三大结构：顺序结构，选择结构，循环结构
+		1.顺序结构：程序自上而下顺序执行,不经任何跳转
+		2.选择结构：先判断条件，如果条件成立则执行某些操作，如果条件不成立，则不执行或执行其他操作，if，Switch
+		3.循环结构：程序中能够重复执行的代码段，for，while，do while
+		*/
+		
+		/*
+		if语句分三种
+		1.单分支：if
+		2.双分支：if else
+		3.单分支：if else if else
+		
+		*/
+		if(3>2){
+			console.log('成立');
+		}
+		
+		if(3<2){
+		   console.log('成立');
+		}else{
+		   console.log('不成立');
+		}
+		//判断年份是否为闰年
+		var year =2000;
+		if(year%4==0 && year%100!=0 || year%400==0){
+			console.log('闰年');
+		}else{
+			console.log('平年');
+		};
+		//水仙花数
+		var sxh = 153;
+		var g = sxh%10;
+		var s = parseInt(sxh/10)%10;
+		var b = parseInt(sxh/100)%10;
+		console.log(g);
+		console.log(s);
+		console.log(b);
+		sxhb = g*g*g+s*s*s+b*b*b;
+		if(sxh == sxhb){
+			console.log('是水仙花')
+		}else{
+			console.log('不是水仙花')
+		}
+	</script>
+</body>
+</html>

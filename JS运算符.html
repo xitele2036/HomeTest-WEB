@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+	运算符：操作符
+	1.算数：+ - * / % ++ --
+	2.关系: > < >= <= == != === !==
+	3.逻辑: && || !
+	4.条件: ?:
+	5.赋值:= += -= /= %=
+	*/
+	
+	/*
+	%:求两个数的余数
+	1.如果分子比分母小，那么结果为分子本身
+	2.结果的符号跟分子相同
+	3.利用求余运算符，可以获取四位数上的每一位数
+	*/
+	console.log(5%3);
+	console.log(3%5);
+	console.log(-3%5);
+	var numb = 7899;
+	console.log(numb % 10);
+	var s =parseInt(numb / 10) % 10;
+	var b =parseInt(numb / 100) % 10;
+	var q =parseInt(numb / 1000) % 10;
+	console.log(s);
+	console.log(b);
+	console.log(q);
+		
+	/*
+	自增运算：++，自减运算 --
+	使用教程：
+	变量++：
+	++变量：
+	标量--：
+	--变量：
+	*/
+		
+	var i =3,j;
+	j = i++;
+	console.log(j);
+	var k = 3,l;	
+ 	l = ++k;
+	console.log(l);
+
+	//关系运算符
+	console.log(3>2);
+	console.log(3<2);
+	console.log(3==2);
+	console.log(3==3);
+	console.log(3=='3');
+	console.log(3==='3');//类型不相等
+	console.log(3!='3');//不等于
+	console.log(3!=='3');//不全等于
+		
+		
+	var nums = 3;
+	console.log(nums%2==0 ? '偶数':'奇数');
+		
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
