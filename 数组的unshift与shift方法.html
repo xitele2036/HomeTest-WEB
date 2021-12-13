@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+	unshift() 方法
+	1.作用：将新项添加到数组的开头，并返回新的长度。
+	2.注释：unshift() 方法会改变数组的长度。
+	3.提示：如需在数组末尾添加新项，请使用 push() 方法。
+	4.格式：array.unshift(item1, item2, ..., itemX)
+	
+	
+	shift() 方法
+	1.作用：用于把数组的第一个元素从其中删除，并返回第一个元素的值。	
+	2.注意： 此方法改变数组的长度！
+	3.提示: 移除数组末尾的元素可以使用 pop() 方法。
+	4.格式：array.shift()
+	
+	*/
+		var arrs = [10,20,30,40,40,50];
+		
+		var res = arrs.unshift(100);
+		var res = arrs.unshift(200);
+		
+		console.log(res);
+		console.log(arrs);
+		
+		var res = arrs.shift();
+		var res = arrs.shift();
+		
+		console.log(res);
+		console.log(arrs);
+	</script>
+</body>
+</html>

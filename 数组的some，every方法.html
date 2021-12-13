@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+	some() 方法
+	1.用法：用于检测数组中的元素是否满足指定条件（函数提供）。
+	some() 方法会依次执行数组的每个元素：
+	2.注意：如果有一个元素满足条件，则表达式返回true , 剩余的元素不会再执行检测。
+		1.如果没有满足条件的元素，则返回false。
+		2.some() 不会对空数组进行检测。
+		3.some() 不会改变原始数组。
+	3.格式：array.some(function(currentValue,index,arr),thisValue)
+	
+	
+	every() 方法
+	1.作用.用于检测数组所有元素是否都符合指定条件（通过函数提供）。
+	every() 方法使用指定函数检测数组中的所有元素：
+	2.注意：如果数组中检测到有一个元素不满足，则整个表达式返回 false ，且剩余的元素不会再进行检测。
+		1.如果所有元素都满足条件，则返回 true。
+		2.every() 不会对空数组进行检测。
+		3.every() 不会改变原始数组。
+	4.格式：array.every(function(currentValue,index,arr), thisValue)
+	*/
+	
+		var arrs = [10,20,30,40,40,50];
+		
+		//数组中的元素是否有大于30的元素
+		var res = arrs.some(function(val,index,arr){
+			return val > 30;
+		})
+		console.log(res);
+		console.log('---------------------');
+		//数组中的元素是否都大于30
+		var res = arrs.every(function(val,index,arr){
+			return val > 30;
+		})
+		console.log(res);
+		console.log('---------------------');
+	/*
+	includes() 方法
+	1.作用：用来判断一个数组是否包含一个指定的值，如果是返回 true，否则false。
+	2.格式：arr.includes(searchElement)
+		   arr.includes(searchElement, fromIndex)
+	*/
+		
+		var arrs = [10,20,30,40,40,50];
+		
+		var res = arrs.includes(20);
+		console.log(res);
+		console.log('---------------------');
+		var res = arrs.includes(20,4);
+		console.log(res);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</body>
+</html>

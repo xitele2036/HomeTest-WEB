@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+	slice() 方法
+	1.作用以新的数组对象，返回数组中被选中的元素。
+	2.注意：slice() 方法选择从给定的 start 参数开始的元素，并在给定的 end 参数处结束，但不包括。
+	3.注释：slice() 方法不会改变原始数组。
+	4.格式：array.slice(start, end) 下标
+	*/
+	
+		var arrs = [10,20,30,40,40,50];
+		
+		var res = arrs.slice(2,3);
+		var res = arrs.slice(2);
+		var res = arrs.slice();
+		console.log(res);
+	</script>
+</body>
+</html>

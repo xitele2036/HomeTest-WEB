@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+	sort方法
+	1.作用：对数组的元素进行排序
+	2.格式：数据名称.sort(参数)
+	
+	
+	*/
+		var arrs = [10,20,2,30,500,40,40,50];
+		//如果数组是数值型数据，那么sort在不传参时，排序结果时有问题的
+		//因为在使用sort方法对数值型数据排序时，会先将里面的元素转换为字符型，然后按照字符型数据的比较规则进行比较。
+		var res = arrs.sort();
+		console.log(res);
+		
+		var res = arrs.sort(function(a,b){
+			return a-b;//升序
+		});
+		console.log(res);
+		
+		
+		var res = arrs.sort(function(a,b){
+			return b-a;//降序
+		});
+		console.log(res);
+	</script>
+	
+</body>
+</html>

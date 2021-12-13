@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+	splice方法
+	1.作用：可以对数组增，删，改操作
+	2.格式：增：数组名称.splice(下标，0，要增加的数据1,数据2，数据3.....);
+		   删：数组名称.splice(下标，个数);返回值为被删除后形成的新的数组
+		   改：数组名称.splice(下标，个数，新的值);
+	
+	*/
+		var arrs = [10,20,2,30,500,40,40,50];
+		console.log(arrs);
+		//在下标为3的位置添加4个数
+		arrs.splice(3,0,212,232,55,777);
+		console.log(arrs);
+		
+		//删除下标为2的元素
+		var res = arrs.splice(2,10);
+		console.log(res);
+		console.log(arrs);
+		
+		
+		//将下标为3的元素改为1000
+		var arr = [10,20,2,30,500,40,40,50];
+		arr.splice(2,1,1000);
+		arr.splice(2,4,1000);
+		console.log(arr);
+	</script>
+</body>
+</html>
