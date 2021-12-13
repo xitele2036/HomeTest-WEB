@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+	join方法
+		1.作用：将数组转换为字符串
+		2.格式：数组.join('分隔符');
+		3.分隔符：
+			1.可以省略，转换时数组元素用逗号进行分隔
+			2.可以指定分隔符
+			3.可以不要分隔符，将元素拼接在一起
+	*/
+		
+	var arr = ['a','b','c','d','e'];
+	
+		var str = arr.join();//默认用逗号作为分隔符
+		var str = arr.join('-');//指定分隔符
+		var str = arr.join('');//将数组元素拼接在一起
+		
+		console.log(str);
+	</script>
+	
+</body>
+</html>
