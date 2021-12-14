@@ -45,6 +45,25 @@
 			return prev + currentValue;
 		},1000);
 		console.log(res);
+		
+		var strs = ['a','b','c','b','f','d','s'];
+		
+		var ress = strs.reduce(function(prev,currentValue){
+			return prev + currentValue;
+		});
+		
+		console.log(ress);
+		
+		//reduceRight是从右往左组合
+		//reduce是从往
+		var ress = strs.reduceRight(function(prev,currentValue){
+			return prev + currentValue;
+		});
+		
+		console.log(ress);
+		
+		
+		
 	</script>
 </body>
 </html>
