@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			字符串的管理方式类似于数组，也就是说每个字符串都有自己的下标，下标从0开始，到字符长度-1
+		
+		*/
+	
+		var str = 'helloworld';
+		console.log(str[9]);
+		console.log('---------------1-----------------');
+		for(var i=0; i<10; i++){
+			console.log(str[i]);
+		}
+		console.log('---------------2-----------------');
+		for(var i in str){
+			console.log(str[i]);
+		}
+		
+		console.log('---------------3-----------------');
+		for(var val of str){
+			console.log(val);
+		}
+		console.log('---------------4-----------------');
+		
+//		str.forEach(function(val,index){
+//			console.log(val);
+//			console.log(index);
+//		});
+//		
+		//字符串一旦创建不可改变
+		
+		
+	</script>
+</body>
+</html>

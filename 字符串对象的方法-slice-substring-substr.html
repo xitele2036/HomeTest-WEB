@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+		slice方法
+		1.作用：对字符串进行截取
+		2.格式：字符串.slice(begin,end);
+		3.参数：
+			begin:起始位置，end:终止位置
+	*/
+		
+		var str = 'helloworld';
+		
+		var res = str.slice(0,5);//不包含end
+		var res = str.slice(5);
+		var res = str.slice();
+		
+		console.log(res);
+		
+	/*
+		substring方法
+		1.作用：按照下标对字符串截取
+		2.格式：字符串.substring(begin,end);
+		3.注意：同上
+	*/
+		
+		var str = 'helloworld';
+		
+		var res = str.substring(0,5);//不包含end
+		var res = str.substring(5);
+		var res = str.substring();
+		
+		console.log(res);
+		
+		//slice方法与substring方法不同：substring的两个参数不可以是负数，但是slice可以
+		
+		
+		var res = str.slice(-5,-1);//-1表示最后一个字符编号
+		console.log(res);
+		
+		
+		var res = str.substring(-5,-1);
+		console.log(res);
+		
+	/*
+		substr方法
+		1.作用：按照个数对字符串进行截取
+		2.格式：字符串.substr(begin,count);
+	*/
+		
+		
+		var str = 'helloworld';
+		var res = str.substr(5,5);
+		console.log(res);
+		
+		
+		
+		
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

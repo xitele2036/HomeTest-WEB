@@ -9,11 +9,79 @@
 	<script>
 	/*
 		如何创建日期和时间对象
-		格式：var 日期时间对象名称 = new Date();表示创建系统当前日期和时间
+		1.格式：var 日期时间对象名称 = new Date();表示创建系统当前日期和时间
+		2.格式：var 日期时间对象名称 = new Date('日期时间字符串');将指定的日期时间字符串转换为日期时间对象
+		3.格式：var 日期时间对象名称 = new Date('毫秒值');返回的是距离1970年1月1日00:00:00的时间点
 	*/
 		
 		var date = new Date();
 		console.log(date);
+		
+		
+		
+//		var str = '2000-1-1'
+//		var date = new Date(str);
+//		console.log(date);
+		
+//		var str = '2000-1-1'
+//		var date = new Date(1000);
+//		console.log(date);
+		
+//		var year = date.getFullYear();//获取年份
+//		console.log(year);
+//		
+//		var year = date.getYear();//返回距离1900年的年份
+//		console.log(year);
+//		
+//		
+//		var month = date.getMonth();//获取月份,0代表1月，0-11代表1-12
+//		console.log(month);
+//		
+//		var day = date.getDate();//返回日
+//		console.log(day);
+//		
+//		var week = date.getDay();//返回星期
+//		console.log(week);
+//		
+//		var hour = date.getHours();//返回小时
+//		console.log(hour);
+//		
+//		var minute = date.getMinutes();//返回分钟
+//		console.log(minute);
+//		
+//		var seconds = date.getSeconds();//返回秒
+//		console.log(seconds);
+//		
+//		var date = date.getTime();//距离1970年1月1号的毫秒值
+//		console.log(date);
+		
+		
+		var res = date.toLocaleString();//包含日期和时间
+		console.log(res);
 	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>
