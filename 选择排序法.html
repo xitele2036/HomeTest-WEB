@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		//选择排序法：用数组中的每个元素和它后面的元素比较，如果符合交换条件则交换两个值的位置
+		var arr = [100,90,98,60,23,56,99];
+		
+		for(var i=0; i<arr.length-1; i++){
+			for(var j=i+1; j<arr.length; j++){
+				if(arr[i] < arr[j]){
+					var temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+		
+		document.write(arr);
+	</script>
+</body>
+</html>

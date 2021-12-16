@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>如何操作对象的内容</title>
+</head>
+
+<body>
+	<script>
+	/*
+		对象内容的增删改查
+		增：为对象增加新的属性和功能
+			1.点语法：对象.属性名称 = 值
+			2.中括号：对象['属性名称'] = 值
+		删：删除对象中的某个属性
+			1.delete 对象名称.属性名
+			2.delete 对象名称['属性名'];
+			3.如果删除成功则返回true,否则返回false
+		改：需改某个属性的值
+			1.点语法：对象名称.属性名称 = 新的值
+			2.中括号：对象名称['属性名'] = 新的值
+		查：获取对象中的某个属性，或者调用对象中的某个方法
+			1.点语法：对象名称.属性名称 ,对象名称.方法名称();
+			2.中括号的方式:对象名称['属性名称'],对象名称['方法名称']();
+			3.区别：点语法后面不可以加变量，但是中括号后面可以加变量
+	*/
+		
+	var obj = {
+		name:'Tom',
+		age:10,
+		gender:'man',
+		speak: function(){
+			console.log('hello');
+		}
+	};
+		
+		console.log(obj.name);
+		console.log(obj.age);
+		obj.speak()
+		console.log(obj['name']);
+		console.log(obj['age']);
+		obj['speak']();
+		
+		
+		
+		var str = 'age';
+		console.log(obj.str);//点语法后面不要加变量，因为他会把变量当做属性名称
+		console.log(obj[str]);
+		
+		obj.school = '北京第一中学';
+		obj.teacher = 'Mr li';
+		
+		obj.run = function(){
+			console.log('跑步');
+		};
+		
+		console.log(obj);
+		
+		
+		var res = delete obj.name;
+		console.log(obj);
+		console.log(res);
+		
+		
+		var obj2 = {
+			a:1,
+			'dwad@w2@13':2
+		};
+		console.log(obj2);
+		console.log(obj2.a);
+//		console.log(obj2.dwad@w2@13); 带特殊字符不可以用点语法
+		console.log(obj2['dwad@w2@13']);
+		
+		
+		
+		
+		
+	</script>
+</body>
+</html>

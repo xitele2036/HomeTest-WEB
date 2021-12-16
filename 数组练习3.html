@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	var arr = [
+		[1,2,3],
+		[4,5,6],
+		[7,8,9]
+	];
+	
+		
+	//原格式打印二维数组	
+	for(var i=0; i<arr.length; i++){
+		for(var j=0; j<arr[i].length; j++){
+			document.write(arr[i][j]+'&nbsp;&nbsp;&nbsp;');
+		}
+		document.write('<br>');
+	}
+		
+	//对角线元素相加
+	var sum = 0;
+	for(var i=0; i<arr.length; i++){
+		for(var j=0; j<arr[i].length; j++){
+			if(i==j || i+j==2){
+				sum = sum + arr[i][j];
+			}
+			
+		}
+
+	}
+	document.write(sum);
+	</script>
+</body>
+</html>

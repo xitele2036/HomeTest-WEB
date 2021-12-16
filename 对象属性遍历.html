@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>对象属性遍历</title>
+</head>
+
+<body>
+	<script>
+	/*
+		对象属性的遍历：for in：专门用来遍历对象属性的循环
+		for (var 变量 in 对象名称){
+		
+		}
+	*/
+		
+		var obj = {
+			a:1,
+			b:2,
+			c:3,
+			d:4
+		}
+		
+		for(var pro in obj){
+			console.log(pro+'----'+obj[pro]);
+		}
+		
+	
+		
+	/*
+		利用object.keys方法获取对象所有属性，格式：Object.keys(对象名称);	
+		返回结果是数组方式
+	*/	
+		
+		var keys = Object.keys(obj);
+		console.log(keys);
+		for(var i=0; i<keys.length; i++){
+			console.log(keys[i]+'------'+obj[keys[i]]);
+		}
+		
+	/*
+		利用object.keys方法获取对象所有属性值，格式：Object.values(对象名称);	
+		返回结果是数组方式
+	*/	
+
+		var keys = Object.values(obj);
+		console.log(keys);
+	/*
+		利用object.entries方法获取对象所有属性名和属性值，格式：Object.entries(对象名称);	
+		返回结果是二维数组
+	*/		
+		var keys = Object.entries(obj);
+		console.log(keys);
+		
+	</script>
+</body>
+</html>

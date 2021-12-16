@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+//		var arr = [1,3,5,7,8,4,2,5,8,56];
+//		arr.sort();
+//		console.log(arr);//如果不传参，那么数值型数据在排序时会错误
+//		
+//		
+//		arr.sort(function(a,b){
+//			return b-a;
+//		});
+//		console.log(arr);
+		
+		var arr = [
+			{
+				name:'tom',
+				age:20,
+				salary:3000
+			},
+			{
+				name:'jack',
+				age:32,
+				salary:4000
+			},
+			{
+				name:'luck',
+				age:22,
+				salary:4000
+			},
+			{
+				name:'jason',
+				age:25,
+				salary:4000
+			},
+			{
+				name:'pit',
+				age:23,
+				salary:11000
+			}
+		];
+//		arr.sort();
+//		console.log(arr);//如果数组中的元素是对象，那么需要在调用sort方法是指定排序依据
+		arr.sort(function(a,b){
+			return b.age-a.age;//按对象中的年龄排序
+		})
+		console.log(arr);
+		
+		arr.sort(function(a,b){
+			return b.salary-a.salary;//按对象中的工资排序
+		})
+		console.log(arr);
+		
+		arr.sort(function(a,b){
+			if(a.salary == b.salary){
+				return b.age-a.age;
+			}
+			return a.salary-b.salary;//按对象中的年龄排序
+		})
+		console.log(arr);
+	</script>
+</body>
+</html>
