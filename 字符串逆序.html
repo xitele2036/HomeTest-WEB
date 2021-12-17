@@ -25,5 +25,78 @@
 		var arr = str.split('').reverse().join('');
 		console.log(arr);
 	</script>
+	
+<!--
+	<script>
+		var username = prompt('请输入你的用户名');
+		
+		if(username == ''){
+			alert('用户名不可以为空');
+		}else if(username.length<6 || username.length>14){
+			alert('用户名长度必须是6-14位');
+		}else if(username.charAt(0)>='0' && username<='9'){
+			alert('用户名第一个字符不可以是数字');
+		}else{
+			for(var i=0;i<username.length; i++){
+				var char = username.charAt(i);
+				if(char>='a' && char<='z' || char>='A' && char<='Z' || char>='0' && char<='9' || char == '_'){
+					
+				}else{
+					alert('用户名必须是数字，字母，下划线awdw');
+					break;
+				}
+			}
+		}
+		
+	</script>
+	
+-->
+	
+	
+	<script>
+		var str = 'adsdsjdklcejneseeadsl';
+		var obj = {};
+		
+		for(var i=0; i<str.length; i++){
+			var char = str.charAt(i);
+			
+			if(!obj[char]){
+				console.log(obj[char]);
+				obj[char] = 1;
+			}else{
+				obj[char] = obj[char] + 1;
+			}
+		}
+		console.log(obj);
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>
