@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>	
+	/*
+		函数定义：封装到一起的，具有特定功能的代码段被称为函数
+		函数的分类：
+			1.从定义角度分：内置函数，用户自定义函数
+			2.从参数角度分：有内参函数，无参函数
+			3.从返回值角度分：有返回值函数，无返回值函数
+		
+		无参无返回值函数的定义与调用
+		function 函数名称（）{
+			函数体；
+		}
+	*/
+	//定义函数，功能是打印1-100之间的所有偶数
+		function printNum(){
+			for(var i=0; i<=100; i++){
+				if(i%2 == 0){
+					console.log(i);
+				}
+			}
+		}
+		
+		
+//		printNum();
+		
+	//定义函数，打印直角三角形
+		function printTriangle(){
+			for(var i=1; i<=5; i++){
+				for(var j=1; j<i; j++){
+					document.write('*');
+				}
+				document.write('<br>');
+			}
+		}
+		
+		printTriangle();
+	</script>
+</body>
+</html>
