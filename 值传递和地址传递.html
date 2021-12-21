@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			值传递：将具体的数据的副本传递给对方，对方在操作这个数据是不影响原始数据
+			地址传递：将引用类型的数据在对内存中的地址传递给对方，对方在操作时，其实时操作的就是原有数据。
+		*/
+		
+		var arr = [10,20,30,40,50];
+		
+		function fn(val){
+			val = 100;
+		}
+		
+		fn(arr[0]);//值传递
+		
+		console.log(arr);
+		
+		function fn(val){
+			val[0] = 100;
+		}
+		
+		fn(arr);//地址传递
+		
+		console.log(arr);
+		
+	</script>
+</body>
+</html>

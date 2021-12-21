@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+		递归函数：就是一个函数内部调用了自己的函数
+		function fn(){
+			fn();
+		}
+	*/
+		//求1-n的和
+		function fn(n){
+			if(n == 1){
+				return 1;
+			}else{
+				return fn(n-1) + n;
+			}
+			
+		}
+		var res = fn(100);
+		console.log(res);
+		
+		//求1-n的成绩
+		function fn(n){
+			if(n == 1){
+				return 1;
+			}else{
+				return fn(n-1) * n;
+			}
+			
+		}
+		var res = fn(10);
+		console.log(res);
+	</script>
+</body>
+</html>

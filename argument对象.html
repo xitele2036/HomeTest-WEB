@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+		argument对象：
+		该对象是函数内部的一个对象，即只能在函数里面使用，不可以在外部使用，它的作用是用来管理函数被调用时传递过来的实参（数据）,他不是一个数组，他是一个伪数组，在管理实参是也是用下标的方式对实参进行了编号，即可以使用argument[下标]的形式操作实参。
+		
+		形参和arguments的关系是：形参和arguments都可以管理实参，而且他们管理的是同一份数据。如果形参的个数是确定，就定义形参，如果形参个数不确定就不用定义形参
+		
+		arguments对象包含两个属性:length属性 callee属性：获取arguments对象所在的函数,常与递归函数结合使用
+	*/
+		
+		function add(num1,num2){
+			var sum;
+			sum = num1+num2;
+			console.log(sum);
+			console.log(arguments[0]);
+			console.log(arguments.callee);
+		}
+		
+		add(10,20);
+		
+		
+		function adds(){
+			var sum = 0;
+			for(var i=0; i<arguments.length; i++){
+				sum = sum + arguments[i];
+			}console.log(sum);
+		}
+		adds(10,23,43,546,23);
+	</script>
+	
+	<script>
+		/*
+			重载函数：两个函数名称相同，但是他们的形参的个数不同，或形参的类型不同，那么我们把这两个函数互相称为重载函数
+			function fn(a,b){
+			
+			}
+			function fn(a,b,c){
+			
+			}
+			
+			注意：JS没有重载函数，如果函数名相同，后面的函数会覆盖前面的函数
+			
+			如果要在JS模拟重载函数，就用arguments对象。
+		*/
+		
+		function fnn(){
+			if(arguments.length==1){
+				console.log('one');
+				
+			}else{
+				console.log('two');
+			}
+		}
+		
+		fnn(10,30);
+		
+	</script>
+	
+</body>
+</html>

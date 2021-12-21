@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+		定义函数的方式：
+		1.函数声明方式
+			function 函数名称（）{
+				函数体；
+			}
+		2.函数表达式方式
+			var 变量名称 = function（）{
+				函数体；
+			}
+		3.利用function构造方法创建函数
+			var 变量名称 = new Function(‘参数1’，‘参数2’，‘参数3’);
+	*/
+		
+		function printNum(){
+			for(var i=0; i<=10; i++){
+				if(i%2 == 0){
+					console.log(i);
+				}
+			}
+		}
+		
+		var fn = function(){
+			for(var i=0; i<=10; i++){
+				if(i%2 == 0){
+					console.log(i);
+				}
+			}
+		}
+		
+		fn();
+		
+		
+		var add = new Function('num1','num2','num3','var sum = console.log(num1+num2+num3);');
+		
+		add(1,2,3);
+	</script>
+</body>
+</html>

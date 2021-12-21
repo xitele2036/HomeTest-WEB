@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			变量分类：全局变量，局部变量
+			1.全局变量：定义在函数外部的变量被称为全局变量
+			2.局部变量：定义在函数内部的变量被称为局部变量
+			3.区别：
+				a.全局变量可以在整个文档中使用
+				b.局部变量只能在定义它的函数内部使用
+				c.函数内部的形参也是局部变量，只能在函数内部使用
+				d.如果全局变量和局部变量重名，那么全局会被屏蔽
+				e.如果局部变量和全局变量重名，那么要使用全局变量可以在变量名称前面加window.或this. 因为全局变量是给window对象绑定的属性
+		*/
+		
+		//全局变量
+		var num = 100;
+		function fn(){
+			console.log(num);
+		}
+		fn();
+		
+		function fn1(){
+			var nums =100;
+		}
+		fn1();
+//		console.log(nums);
+		
+		function fn2(){
+			var num = 200;
+			console.log(window.num);
+		}
+		fn2();
+	</script>
+</body>
+</html>
