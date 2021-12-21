@@ -14,26 +14,39 @@
 		}
 	*/
 		//求1-n的和
-		function fn(n){
-			if(n == 1){
-				return 1;
-			}else{
-				return fn(n-1) + n;
-			}
-			
-		}
-		var res = fn(100);
-		console.log(res);
+//		function fn(n){
+//			if(n == 1){
+//				return 1;
+//			}else{
+//				return fn(n-1) + n;
+//			}
+//			
+//		}
+//		var res = fn(100);
+//		console.log(res);
+//		
+//		//求1-n的成绩
+//		function fn(n){
+//			if(n == 1){
+//				return 1;
+//			}else{
+//				return fn(n-1) * n;
+//			}
+//			
+//		}
+//		var res = fn(10);
+//		console.log(res);
+//		
+		//有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数为多少？
 		
-		//求1-n的成绩
 		function fn(n){
-			if(n == 1){
+			if(n == 1||n == 2){
 				return 1;
 			}else{
-				return fn(n-1) * n;
+				return fn(n-1) + fn(n-2);
 			}
-			
 		}
+		
 		var res = fn(10);
 		console.log(res);
 	</script>
