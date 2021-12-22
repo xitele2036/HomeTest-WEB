@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+		回调函数：如果一个函数被当做一个函数的参数，那么这个被作为参数的函数就是回调函数，回调函数常用匿名函数
+	*/
+		
+		var arr = [1,4,6,78,3,21,8];
+		
+		arr.sort(function(a,b){
+			return a - b;
+		});
+		
+		console.log(arr);
+		
+		//数组filter方法，就是从数组中过滤出符合条件的数组元素，返回值由这些元素组成
+		
+		var res = arr.filter(function(val){
+			return val > 5;
+		})
+		console.log(res);
+	</script>
+</body>
+</html>

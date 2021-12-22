@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+	/*
+		匿名自执行函数：么有名称且不需要手动调用的函数
+		格式如下：
+		1.无参无返回值
+		(function(){
+			函数体;
+		})();
+		
+		2.有参无返回值
+		(function(形参1，形参2，形参3...){
+			函数体;
+		})(实参1，实参2，实参3...);
+		
+		3.有参无返回值
+		(function(形参1，形参2，形参3...){
+			函数体;
+			return 返回值;
+		})(实参1，实参2，实参3...);
+		
+		注意：匿名自执行函数通常用来创建块级作用域
+	*/
+		
+		(function(){
+			console.log('hello')
+		})();
+		
+		
+		//求两个数的和
+		(function(sum1,sum2){
+			var sum;
+			sum = sum1+sum2;
+			console.log(sum);
+		})(10,20);
+		
+		
+		//求和，将和作为返回值返回
+		var res = (function(sum1,sum2){
+			var sum;
+			sum = sum1+sum2;
+			return sum;
+		})(100,200)
+		
+		console.log(res);
+	</script>
+</body>
+</html>

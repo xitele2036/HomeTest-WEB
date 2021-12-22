@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box"></div>
+	<script>
+	/*
+		匿名函数：没有函数名称的函数，匿名函数可以和事件相结合，
+		HTML元素.on事件名称 = function(){
+			函数体;
+		}
+	*/
+	//为页面中的div添加点击事件，当点击div时，在控制台打印hello
+	//1.获取页面div
+		var myDiv = document.querySelector('div');
+	//2.为div添加点击操作
+		myDiv.onclick = function(){
+			for(var i=0;i<5;i++){
+				console.log('hello');
+			}
+		};
+		
+	</script>
+	<button style="margin-top: 20px; width: 100px; height: 50px;">按钮</button>
+	<script>
+	//页面创建button按钮，点击按钮时，在控制台生成验证码
+		var myButton = document.querySelector('button');
+		myButton.onclick = function(){
+			var str = 'abcdefghijklmnopqrstuvwyz0123456789';
+			var str2 = '';
+			for(var i=0;i<5;i++){
+				var index = parseInt(Math.random() * str.length);
+				var char = str.charAt(index);
+//				console.log(char);
+				str2 = str2 + char;
+			}
+				console.log(str2);
+		};
+	
+	</script>
+</body>
+</html>
