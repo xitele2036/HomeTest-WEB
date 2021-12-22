@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	
+	<div id="box" title="hello">我是一个div节点</div><!-- 他是一个div -->
+	<script>
+		/*
+		nodeType属性:获取节点类型
+			元素节点 返回值为1
+			属性节点 返回值为2
+			文本节点 返回值为3
+			注释节点 返回值为8
+			文档节点 返回值为9
+			
+		nodeName属性：获取节点名称
+			元素节点 返回值为元素名称
+			属性节点 返回值为属性名称
+			文本节点 返回值为#text
+			注释节点 返回值为#comment
+			文档节点 返回值为#document
+			
+		nodeValue属性：获取节点名称
+			元素节点 返回值为null
+			属性节点 返回值为属性值
+			文本节点 返回值为文本内容
+			注释节点 返回值为注释内容
+			文档节点 返回值为null
+		*/
+		
+	//元素节点
+		var obj = document.querySelector('#box');
+		console.log(obj.nodeType);
+		console.log(obj.nodeName);
+		console.log(obj.nodeValue);
+		console.log('-------------')
+		
+	//属性节点
+		var attr = obj.getAttributeNode('id');
+		console.log(attr.nodeType);
+		console.log(attr.nodeName);
+		console.log(attr.nodeValue);
+		console.log('-------------')
+	
+	//文本节点
+		var txt = obj.firstChild;
+		console.log(txt.nodeType);
+		console.log(txt.nodeName);
+		console.log(txt.nodeValue);
+		console.log('-------------')
+		
+	//注释节点
+		var comment = obj.nextSibling;
+		console.log(comment.nodeType);
+		console.log(comment.nodeName);
+		console.log(comment.nodeValue);
+		console.log('-------------')
+		
+	//文档节点
+		console.log(document.nodeType);
+		console.log(document.nodeName);
+		console.log(document.nodeValue);
+		console.log('-------------')
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id="box">1</div>
+	<div>2</div>
+	<p>3</p>
+	<p>4</p>
+	<input type="checkbox" name="hobby">爬山
+	<input type="checkbox" name="hobby">游泳
+	<input type="checkbox" name="hobby">唱歌
+	<ul>
+		<li>我是第1个li</li>
+		<li class='sty'>我是第2个li</li>
+		<li>我是第3个li</li>
+		<li class='sty'>我是第4个li</li>
+		<li>我是第5个li</li>
+	</ul>
+	
+	<span>1</span>
+	<span>2</span>
+	<span>3</span>
+	
+	<div id="boxbox">
+		<span>4</span>
+		<span>5</span>
+	</div>
+	<script>
+	/*
+		元素节点的获取：
+		1.document.getElementById():通过标签的ID属性获取元素
+			注意：
+			1.参数不需要加#
+			2.ID值相同只能获取第一个
+			3.参数区分大小写
+			
+		2.document.getElementByTagName():通过标签名来获取元素（不是数组）
+			注意：
+			1.参数不区分大小写
+			2.返回值为 伪数组，可以通过下标获取元素
+			
+		3.document.getElementsByName():通过标签的name属性来获取元素（不是数组）
+		
+		4.document.getElementsByClassName();通过类名获取元素，有浏览器兼容性，主要是IE8以下
+		
+		5.document.querySelector()通过css选择器来获取元素，只能返回符合选择器的第一个元素
+		
+		6.document.querySelectorAll()通过css选择器来获取元素，返回符合选择器的所有元素
+	*/
+//		通过ID获取元素
+		var div1 = document.getElementById('box');
+		console.log(div1);
+		
+//		通过标签名获取元素
+		var div2 = document.getElementsByTagName('div');
+		console.log(div2);
+		
+//		通过name属性获取,适用于表单元素
+		var inputs = document.getElementsByName('hobby');
+		console.log(inputs);
+		
+//		通过类获取元素
+		var lis = document.getElementsByClassName('sty');
+		console.log(lis);
+		
+//		通过css选择器获取页面元素
+		var objs = document.querySelector('div,p');
+		console.log(objs);
+		
+		
+		var objs = document.querySelectorAll('div,p');
+		console.log(objs);
+		
+		
+		var res = document.getElementById('boxbox');
+		var span = res.getElementsByTagName('span');
+		console.log(span);
+		
+		var res = document.querySelectorAll('#boxbox span');
+		console.log(res);
+	</script>
+</body>
+</html>

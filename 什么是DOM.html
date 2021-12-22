@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div title="hello" id="box">1</div>
+	<div>
+		<p>2</p>
+		<h3>
+			<span>3</span>
+			<a href="">4</a>
+		</h3>		
+		<ul>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+	<script>
+	/*
+		DOM:Document Object Model,文档对象模型，它规定操作文档和文档中内容的API，DOM它不是一个对象，它主要使用document对象来操作文档和文档中的内容，它认为页面中的所有元素都可以被看做是一个节点，整个文档就是有这些节点构成的树形结构
+		常用节点如下
+		元素节点：HTML文档中的标签
+		属性节点：标签中的属性名称和属性值
+		文本节点：标签中的文本内容
+		注释节点：HTML注释
+		文档节点：整个HTML文档被称为文档节点
+		
+		注意：所有节点都是对象类型,所有节点都包含如下属性
+		nodeType:表示节点类型
+		nodeName:表示节点名称
+		nodeValue:表示节点值
+	*/
+		
+		var div = document.querySelector('#box');
+		console.log(typeof div);
+	</script>
+</body>
+</html>
