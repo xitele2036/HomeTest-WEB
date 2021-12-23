@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div>我是第1</div>
+	<div>我是第2</div>
+	<div>我是第3</div>
+	<div>我是第4</div>
+	<div>我是第5</div>
+	
+	<script>
+		//getElementsByTagName获取的是动态的
+		var divs = document.getElementsByTagName('div');
+		console.log(divs);
+		//querySelectorAll获取的是静态的
+		var divs2 = document.querySelectorAll('div');
+		console.log(divs2);
+		
+		var newDiv = document.createElement('div');
+		newDiv.innerHTML = '我是新的div';
+		document.body.append(newDiv);
+		console.log(divs);
+		console.log(divs2);
+	</script>
+</body>
+</html>

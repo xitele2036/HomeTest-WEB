@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id="box">
+		<p>hello</p>
+		world
+	</div>
+	
+	<input type="text" id='user'>
+	<button>按钮</button>
+	<script>
+		var box = document.querySelector('#box');
+		console.log(box.innerHTML);
+		console.log(box.textContent);
+		
+		
+		box.textContent = '<i>你好</i>';
+		
+		var btn = document.querySelector('button');
+		btn.onclick = function(){
+			var user = document.querySelector('#user');
+			console.log(user.value);
+		}
+		
+		
+	</script>
+</body>
+</html>

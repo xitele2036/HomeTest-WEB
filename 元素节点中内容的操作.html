@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id="box">
+		<p>hello</p>
+		world
+	</div>
+	
+	<div id="box2">123</div>
+	
+	
+	
+	<input type="text" id="user">
+	<button>按钮</button>
+	<script>
+		/*
+			innerHTML
+			innerText
+			value：适用于表单元素
+		*/
+		
+		var div = document.querySelector('#box');
+		//获取div中的内容
+		var str = div.innerHTML;
+		console.log(str);//能够将DIV下面的所有后代标签和内容一起获取
+		
+		var str2 = div.innerText;
+		console.log(str2);//只能获取div下面的文本内容
+		
+		var div2 = document.querySelector('#box2');
+		
+		div2.innerHTML = '<i>OK</i>';//可以解析标签
+//		div2.innerText = '<i>OK</i>';、不可以解析标签
+		
+		var btn = document.querySelector('button');
+		btn.onclick = function(){
+			//获取文本框的值
+//			var input = document.querySelector('#user');
+//			console.log(input.value);//获取的文本框的值为字符串类型
+			
+			//设置文本框
+			var input = document.querySelector('#user');
+			input.value = 100;
+		};
+	</script>
+</body>
+</html>
