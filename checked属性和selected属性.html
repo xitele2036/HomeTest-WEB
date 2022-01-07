@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<input type="checkbox" name="hobby">爬山
+	<input type="checkbox" name="hobby">游泳
+	<input type="checkbox" name="hobby">唱歌
+	<br>
+	<select name="" id="">
+		<option value="">100</option>
+		<option value="">200</option>
+		<option value="">300</option>
+		<option value="">400</option>
+		<option value="">500</option>
+	
+	</select>
+	<script>
+		/*
+			如果要使用script操作表单元素中的checked属性和selected属性，那么注意，属性值需要设置为true，false
+			1.true：表示选中
+			2.false：表示未选中
+			
+		*/
+		
+		var inputs = document.getElementsByName('hobby');
+		inputs[0].checked = true;
+		inputs[1].checked = false;
+		inputs[2].checked = true;
+		
+		var options = document.querySelectorAll('option');
+//		sel[0].checked = true;
+		options[3].selected = true;
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		//获取html节点：document.documentElement属性
+//		var html = document.getElementsByTagName('html')[0];
+//		console.log(html);
+		console.log(document.documentElement);
+		
+		//获取body节点：document.body属性
+		console.log(document.body);
+		
+		//获取head节点：document.head属性
+		console.log(document.head);
+		
+		//获取或设置title节点：document.title或document.title = 值
+		console.log(document.title);
+		document.title = 'hello';
+		
+		//文档节点：document,也可以使用元素节点的owerDocument属性获取文档节点
+		console.log(document);
+		console.log(document.body.ownerDocument);
+		
+		/*
+			document对象属性如下
+			1.documentURI:HTML文档地址
+			2.URL:HTML文档地址
+			3.domain:返回地址中的域名部分
+			4.lastModified:返回文档上一次修改的时间
+			5.location:返回location对象，该对象用来操作url地址，包含属性与方法：
+				a.href属性：获取或设置当前地址,能够利用它实现页面跳转
+				b.assign方法：设置url地址，格式：document.location.assign('地址')
+				注意：href属性和assign方法在实现页面跳转是都会产生浏览记录，如果要实现页面跳转，除了用上面的href属性和assign方法，还可以使用window对象的location属性来进行跳转。window.location = '新的地址'
+			6.readyState属性：返回的页面加载状态，包含三种状态：
+				a.loading:表示正在加载html文档，并解析
+				b.interactive:表示正在加载外部资源
+				c.complete:表示整个文档加载完毕
+				
+				如果要看到上面的效果可以
+				1.现在network选项卡下面将网速调为slow3G
+				2.重新刷新页面
+				3.在控制台输入：setInterval(function(){console.log(document.readyState)},100)
+		*/
+		console.log(decodeURIComponent(document.documentURI));
+		console.log(document.URL);
+		console.log(document.domain);
+		console.log(document.lastModified);
+		console.log(document.location);
+		console.log(document.location.href);
+		document.location.assign('http://www.baidu.com');
+		window.location.assign('http://www.baidu.com');
+		
+		
+		
+		
+		
+		
+		
+		//文档类型声明：document.doctype属性
+		console.log(document.doctype);
+	</script>
+</body>
+</html>

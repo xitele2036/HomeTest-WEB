@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<ul>
+		<li>我是第1个li</li>
+		<li>我是第2个li</li>
+		<li>我是第3个li</li>
+		<li id="box">我是第4个li</li>
+		<li>我是第5个li</li>
+		<li>我是第6个li</li>
+		<li>我是第7个li</li>
+		<li>我是第8个li</li>
+		<li>我是第9个li</li>
+		<li>我是第10个li</li>		
+	</ul>
+	
+	<script>
+//		var box = document.querySelector('#box');
+//		console.log(box.previousSibling.previousSibling);
+		/*
+			childNodes----children
+			firstChild----firstElementChild
+			lastChild----lastElementChild
+			parentNode----parentElement
+			nextSibling----nextElementSibling
+			previousSibling----previousElementSibling
+		*/
+		
+		var ul = document.querySelector('ul');
+		console.log(ul.childNodes);
+		console.log(ul.children);
+		console.log('-------------------');
+		
+		console.log(ul.firstChild);
+		console.log(ul.firstElementChild);
+		console.log('-------------------');
+		
+		console.log(ul.lastChild);
+		console.log(ul.lastElementChild);
+		console.log('-------------------');
+		
+		
+		console.log(ul.parentNode.parentNode.parentNode);
+		console.log(ul.parentElement.parentElement.parentElement);
+		console.log('-------------------');
+		
+		var box = document.querySelector('#box');
+		console.log(box.parentNode.parentNode.parentNode);
+		console.log(box.parentElement.parentElement.parentElement);
+		console.log('-------------------');
+		
+		
+	</script>
+</body>
+</html>

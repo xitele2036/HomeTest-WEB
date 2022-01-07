@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<ul>
+		<li>我是第1个li</li>
+		<li>我是第2个li</li>
+		<li>我是第3个li</li>
+		<!--我是注释-->
+		<li id="box">我是第4个li</li>
+		<li>我是第5个li</li>
+		<li>我是第6个li</li>
+		<li>我是第7个li</li>
+		<li>我是第8个li</li>
+		<li>我是第9个li</li>
+		<li>我是第10个li</li>		
+	</ul>
+	
+	<script>
+	/*
+		页面中的节点不是孤立的，是有关系的，常见的如下：
+		1.childNodes:父元素的所有子节点
+		2.firstChild:父元素的第一个子节点
+		3.lastChild:父元素的最后一个节点
+		4.parentNode:父节点
+		5.nextSibling:下一个兄弟节点
+		6.previousSibling:前一个兄弟节点
+	*/
+		
+		var ul = document.querySelector('ul');
+		//ul所有子节点
+		console.log(ul.childNodes);
+		//ul第一个子节点
+		console.log(ul.firstChild);
+		//ul最后一个子节点
+		console.log(ul.lastChild);
+		
+		var box = document.querySelector('#box');
+		
+		//获取box的父节点
+		console.log(box.parentNode);
+		
+		//获取box的下一个兄弟节点
+		console.log(box.nextSibling.nextSibling);
+		
+		//获取box的前一个兄弟节点
+		console.log(box.previousSibling.previousSibling);
+	</script>
+	
+</body>
+</html>

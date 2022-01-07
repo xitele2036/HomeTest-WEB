@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id="box"></div>
+	
+	
+	<script>
+		/*
+			creatAttribute方法
+			1.作用：创建属性节点对象，返回值为创建好的属性节点对象
+			2.格式：document.createAttribute('属性名称')
+			3.注意：属性节点创建好后，他没有对应的属性值，需要调用value属性，为该属性节点添加值，格式：属性节点.value = 值
+			4.当属性节点对象处理完毕后，可以利用setAttributeNode方法，将这个属性节点添加到HTML元素上，格式：元素节点.setAttributeNode(属性节点对象)
+		
+		*/
+		
+	var div = document.querySelector('#box');
+	
+	//创建属性节点title
+	var res = document.createAttribute('title');
+	//利用value属性为上面的属性节点添加值
+	res.value = 'hello';
+	//利用setAttributeNode方法将创建好的属性节点添加到div中
+	div.setAttributeNode(res);
+	</script>
+	
+</body>
+</html>
