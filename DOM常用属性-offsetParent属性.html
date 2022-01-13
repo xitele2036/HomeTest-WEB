@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		#boxx {
+			 width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+		#box {
+			 width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		#boxbox{
+			width: 300px;
+			height: 300px;
+			background-color: aquamarine;
+			position: absolute;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="boxx"></div>
+	<div id="boxbox">
+		<div id="box"></div>
+	</div>
+	
+	
+	<script>
+		/*
+			offsetParent属性：返回的是样式偏移时的参照物
+			1.如果元素没有祖先元素，那么返回的是body
+			2.如果元素有祖先元素，但是祖先元素没有定位，那么返回还是body
+			3.如果元素有祖先元素，且祖先元素有定位，那么返回的是具有定位的且离该元素最近的祖先元素
+		*/
+		
+		var div = document.getElementById('box');
+		console.log(div.offsetParent);
+		
+		/*
+			offsetTop:距离偏移对象顶部的距离
+			offsetLeft:距离偏移对象的左侧的距离
+			格式：元素节点.offsetTop或元素节点.offsetLeft
+		*/
+		var boxx = document.querySelector('#boxx');
+		console.log(boxx.offsetParent);
+		console.log(boxx.offsetTop);
+		console.log(boxx.offsetLeft);
+		
+	</script>
+</body>
+</html>

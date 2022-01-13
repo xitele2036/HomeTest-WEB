@@ -1,0 +1,11 @@
+/* CSS Document */
+
+	#box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			font-size: 68px;
+			text-align: center;
+			line-height: 200px;
+			
+		}

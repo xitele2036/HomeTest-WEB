@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id="box"></div>
+	<script>
+		/*
+			createTextNode方法
+			1.作用：创建文本节点
+			2.格式：document.createTextNode('文本内容')；
+			3.返回值：文本节点
+		
+		*/
+		
+		var txt = document.createTextNode('OK');
+		
+		var div = document.getElementById('box');
+		
+		div.appendChild(txt);
+	</script>
+</body>
+</html>

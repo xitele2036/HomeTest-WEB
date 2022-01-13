@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+	
+	
+	<div id="box3">
+		<span>hello</span>
+	</div>
+	
+	
+	<div id="box4"></div>
+	<script>
+		/*
+			isEqualNode()方法
+			1.作用：判断两个节点是否相等
+			2.格式：节点1.isEqualNode(节点2)
+			3.返回值：true，false
+		*/
+		
+//		var box1 = document.querySelector('#box1');
+//		var box2 = document.querySelector('#box2');
+//		
+//		console.log(box1.isEqualNode(box2));
+		
+		/*
+			contains方法
+			1.作用：判断某个节点是否包含另外的某个指定的节点
+			2.格式：节点1.contains(可能包含的节点)；
+			3.返回值：true，false
+		*/
+		var box3 = document.querySelector('#box3');
+		var span = document.querySelector('span');
+		
+		console.log(box3.contains(span));
+		
+		/*
+			hasChildNodes方法
+			1.作用：判断是否有子节点（true,false）
+			2.格式：节点.hasChildNodes()；
+			3.返回值：true(不是空元素)，false(空元素)
+		*/
+		var box4 = document.querySelector('#box4');
+		console.log(box4.hasChildNodes());
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<ul>
+		<li>我是第1个li</li>
+		<li id="box">我是第2个li</li>
+		<li>我是第3个li</li>
+		<li>我是第4个li</li>
+		<li>我是第5个li</li>
+		<li>我是第6个li</li>
+	</ul>
+	
+	<script>
+		/*
+			replaceChild方法
+			1.作用：替换某个节点
+			2.格式：父节点.replaceChild(新的节点，旧的节点)；
+			3.返回值：被替换掉的节点
+			
+		*/
+		
+		var ul = document.querySelector('ul');
+		var newLi = document.createElement('li');
+		var box = document.querySelector('#box');
+		
+		newLi.innerHTML = '我是新的li节点';
+		
+		ul.replaceChild(newLi,box);
+	</script>
+</body>
+</html>

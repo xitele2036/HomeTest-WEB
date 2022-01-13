@@ -6,6 +6,18 @@
 </head>
 
 <body>
+	<a href="" name="">1</a>
+	<a href="" name="">2</a>
+	<a href="" name="">3</a>
+	
+	<form action=""></form>
+	<form action=""></form>
+	<form action=""></form>
+	
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	
 	<script>
 		//获取html节点：document.documentElement属性
 //		var html = document.getElementsByTagName('html')[0];
@@ -52,11 +64,24 @@
 		console.log(document.lastModified);
 		console.log(document.location);
 		console.log(document.location.href);
-		document.location.assign('http://www.baidu.com');
-		window.location.assign('http://www.baidu.com');
+//		document.location.assign('http://www.baidu.com');
+//		window.location.assign('http://www.baidu.com');
+		console.log(document.readyState);
 		
+		//anchors:获取页面中所有的具有name属性的超链接
+		console.log(document.anchors);
 		
+		//forms:获取页面中的所有form节点
+		console.log(document.forms);
 		
+		//images:获取页面中的所有image节点
+		console.log(document.images);
+		
+		//links:获取页面所有的带有href属性的链接
+		console.log(document.links);
+		
+		//scripts:获取页面中所有的script节点
+		console.log(document.scripts);
 		
 		
 		

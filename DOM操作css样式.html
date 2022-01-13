@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<!--
+		行内样式
+		内部样式
+		外部样式
+	-->	
+	<div id="box" style="width: 200px;height: 200px;background: #ECB7B8;font-size: 68px;text-align: center;line-height: 200px;">hello</div>
+	<script>
+		/*
+			如果使用DOM操作行内样式，可以使用元素节点的style属性来操作
+			获取行内样式：元素节点.style.CSS属性名称 返回的是css样式声明对象，这个对象中有我们设置的css样式
+			设置行内样式：元素节点.style.CSS属性名称 = 值；
+		*/
+		
+		var div = document.querySelector('#box')
+		console.log(div.id);
+		console.log(div.style);
+		console.log(div.style.width);
+		console.log(div.style.height);
+		console.log(div.style.background);
+		console.log(div.style.fontSize);//如果CSS属性名称由横线链接多个单词，那么采用驼峰命名法
+		console.log(div.style.cssText);//返回值为由所有行内样式形成的字符串
+		
+		div.style.color = 'red';
+		
+	</script>
+</body>
+</html>

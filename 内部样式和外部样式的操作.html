@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+	<div id="box">hello</div>
+	
+	<script>
+		/*
+			getComputedStyle方法
+			1.作用：可以在谷歌，火狐，但是不包含低版本IE，操作或设置外部样式表或内部样式表
+			2.格式：window.getComputedSytle(元素节点,null);
+			3.返回值：返回经过计算的元素身上的样式
+		*/
+//		var div = document.getElementById('box');
+//		
+////		console.log(div.style);
+//		
+//		var obj = window.getComputedStyle(div,null);
+//		console.log(obj.width);
+//		console.log(obj.color);
+//		console.log(obj.fontSize);
+		
+		/*
+			如果要在低版本的IE中获取内部或外部样式表，可以使用currentStyle属性
+			1.格式：元素节点.currentStyle
+			2.返回值：返回样式表对象
+		*/
+		
+//		var div = document.getElementById('box');
+//		var obj = div.currentStyle;
+//		console.log(obj.width);
+//		console.log(obj.height);
+//		console.log(obj.fontSize);
+		
+		
+		/*
+			获取内部样式或外部样式的兼容性方法
+		*/
+		function getStyle(ele,cssName){
+			if(window.getComputedStyle == undefined){//如果等于undefined，说明是IE
+				return ele.currentStyle[cssName];//此处不可以使用点语法，因为点语法不支持变量
+			}else{
+				return window.getComputedStyle(ele,null)[cssName];
+			}
+		}
+		var div = document.getElementById('box');
+		var res = getStyle(div,'width');
+		console.log(res);
+		
+//		console.log(window.getComputedStyle);
+	</script>
+</body>
+</html>

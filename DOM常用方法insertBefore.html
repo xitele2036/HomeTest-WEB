@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<ul>
+		<li>我是第1个li</li>
+		<li id="box">我是第2个li</li>
+		<li>我是第3个li</li>
+		<li>我是第4个li</li>
+		<li>我是第5个li</li>
+		<li>我是第6个li</li>
+	</ul>
+	<script>	
+		/*
+			insertBefore方法
+			1.作用：将某个节点插入到目标节点的前面
+			2.格式：父节点.insertBefore（目标节点，要插入的新节点）；
+		*/
+		var ul = document.querySelector('ul');
+		var newLi = document.createElement('li');
+		var li2 = document.querySelector('#box');
+		
+		newLi.innerHTML = '我是新的li节点';
+		
+		ul.insertBefore(newLi,li2);
+	</script>
+	
+</body>
+</html>

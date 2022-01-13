@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div id="box" style="color: aquamarine;background-color: burlywood;font-size: 100px;">hello</div>
+	<script>
+		/*
+			元素节点.style.setProperty(propertyName,value):设置某个CSS属性
+			元素节点.style.getPropertyValue(propertyName):读取某个CSS属性的值
+			元素节点.style.removeProperty(propertyName):删除某个CSS属性
+		*/
+		
+		var div = document.querySelector('#box');
+		
+		//利用getPropertyValue方法获取CSS属性的值
+		var res = div.style.getPropertyValue('background-color');//不需要驼峰命名法
+		console.log(res);
+		
+		//利用setProperty方法设置或修改CSS属性的值
+		div.style.setProperty('color','#00f');
+		
+		//利用removeProperty方法删除某个CSS属性
+		div.style.removeProperty('font-size');//不需要驼峰命名法
+	</script>
+</body>
+</html>
