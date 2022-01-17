@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<a href="https://www.google.com/" id="link">google</a>
+	<script>
+		/*
+			preventDefault
+			1.作用：取消默认行为，默认行为指的是页面中元素的某些默认功能，如：超链接
+			2.格式：事假对象.preventDefault();
+			3.注意：IE8及以前的不支持
+		*/
+		
+		var link = document.getElementById('link');
+		link.onclick = function(e){
+			e = e || window.Event;
+			
+			//取消默认行为
+			e.preventDefault();
+			console.log(e.preventDefault);
+		};
+	</script>
+</body>
+</html>

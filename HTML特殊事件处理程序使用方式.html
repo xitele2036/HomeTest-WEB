@@ -19,7 +19,7 @@
 
 <body>
 	<div onClick="f1(); f2()">1</div>
-<!--	如果是HTML事件处理程序，那么当事件名称相同时，会执行第一个事件，后面的会被屏蔽掉-->
+<!--如果是HTML事件处理程序，那么当事件名称相同时，会执行第一个事件，后面的会被屏蔽掉-->
 	<div onClick="f1()" onClick="f2()">2</div>
 	<script>
 		function f1(){

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: #FF0000;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box"></div>
+	<script>
+		/*
+			1.什么是事件对象：事件对象时JS中的一个内置对象，该对象记录了和当前对象的相关信息，另外事件对象也提供了大量的属性和方法帮助我们操作事件
+			2.事件对象的获取
+				a.谷歌:事件对象被以实参的形式传递给事件处理函数
+				b.IE8及以前的低版本:可以使用window对象的event属性来获取，格式：window.event;
+		*/
+		
+		var  div = document.getElementById('box');
+		
+		//谷歌
+		div.onclick = function(e){
+			console.log(e);
+		}
+		
+//		document.onkeydown = function(e){
+//			console.log(e);
+//		}
+		
+		//IE8以前
+		div.onclick = function(){
+			var e = window.event;
+			console.log(e);
+		}
+		
+		
+		//获取事件对象的兼容写法
+		div.onclick = function(e){
+			e = e || window.event;
+			console.log(e);
+		}
+	</script>
+</body>
+</html>

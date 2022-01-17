@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		body{
+			height: 3000px;
+		}
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: #FF0000;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box"></div>
+	
+	<script>
+		var div = document.getElementById('box');
+		
+		div.onclick = function(e){
+			e = e || window.Event;
+			//获取鼠标的点击的点距离屏幕左侧和顶端的距离
+			console.log(e.screenX,e.screenY);
+			
+			//获取鼠标的点击的点距离窗口左侧和顶端的距离,不受滚动条影响
+			console.log(e.clientX,e.clientY);
+			
+			//获取鼠标的点击的点距离页面左侧和顶端的距离,受滚动条影响
+			console.log(e.pageX,e.pageY);
+			
+			//获取鼠标点击的点距离自身左侧和上边的距离
+			console.log(e.offsetX,e.offsetY);
+		};
+	</script>
+</body>
+</html>

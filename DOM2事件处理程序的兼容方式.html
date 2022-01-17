@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<button>删除事件</button>
+	<div id="box"></div>
+	
+	<script>
+		var div = document.getElementById('box');
+		var btn = document.getElementsByTagName('button')[0];
+		//定义一个函数，该函数的功能为元素添加事件，（解决DOM2事件处理在IE下面不支持的问题）
+		
+		/*
+			ele:表示要被添加的事件元素
+			eventName:表示事件的名称
+			callback:表示事件被触发时要执行的操作
+			eventStream:表示事件流 
+		*/
+		function addEvent(ele,eventName,callback,eventStream){
+			if(ele.addEventListener == undefined){
+			   		ele.attachEvent('on'+eventName,callback);
+			   }else{
+				   	ele.addEventListener(eventName,callback,eventStream);
+			   }
+		}
+		
+		/*
+			ele:表示要被添加的事件元素
+			eventName:表示事件的名称
+			callback:表示事件被触发时要执行的操作
+			eventStream:表示事件流 
+		*/
+		function removeEvent(ele,eventName,callback,eventStream){
+			if(ele.removeEventListener == undefined){
+			   		ele.detachEvnet('on'+eventName,callback);
+			   }else{
+				   	ele.removeEventListener(eventName,callback,eventStream);
+			   }
+		}
+		
+		function fn(){
+			console.log('hello');
+		}
+		
+		
+		addEvent(div,'click',fn,false);
+		btn.onclick = function(){
+			removeEvent(div,'click',fn,false);
+		};
+	</script>
+</body>
+</html>

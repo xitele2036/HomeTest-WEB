@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		table,td{
+			border: 1px solid;
+		}
+		table{
+			width: 600px;
+			border-collapse: collapse;
+			margin: 100px auto;
+		}
+		tr{
+			height: 40px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>产品名称</th>
+			<th>产品单价</th>
+			<th>产品数量</th>
+			<th>总价</th>
+		</tr>
+		<tr>
+			<td>Iphone5</td>
+			<td>500</td>
+			<td>
+				<input type="button" value="-" onclick="jian(this)">
+				<span>1</span>
+				<input type="button" value="+" onclick="jia(this)">
+			</td>
+			<td class="money">500</td>
+		</tr>
+		<tr>
+			<td>Iphone6</td>
+			<td>600</td>
+			<td>
+				<input type="button" value="-" onclick="jian(this)">
+				<span>1</span>
+				<input type="button" value="+" onclick="jia(this)">
+			</td>
+			<td class="money">600</td>
+		</tr>
+		<tr>
+			<td>Iphone7</td>
+			<td>700</td>
+			<td>
+				<input type="button" value="-" onclick="jian(this)">
+				<span>1</span>
+				<input type="button" value="+" onclick="jia(this)">
+			</td>
+			<td class="money">700</td>
+		</tr>
+		<tr>
+			<td colspan="3">total</td>
+			<td id="total">1800</td>
+		</tr>
+	</table>
+	
+	
+	<script>
+		function jia(obj){
+			//获取现有数量
+			var num = parseInt(obj.previousElementSibling.innerHTML);
+			
+			//修正num的值
+			num++;
+			
+			//重新设置span的值
+			obj.previousElementSibling.innerHTML = num;
+			
+			//计算总价
+			var price = num * parseInt(obj.parentElement.previousElementSibling.innerHTML);
+			
+			//将总价写入到总价单元格
+			obj.parentElement.nextElementSibling.innerHTML = price;
+			
+			total();
+		}
+		
+		function jian(obj){
+			//获取现有数量
+			var num = parseInt(obj.nextElementSibling.innerHTML);
+			
+			//修正num的值
+			if(num > 1){
+				num--;
+				
+				//重新设置span的值
+				obj.nextElementSibling.innerHTML = num;
+			}
+				
+			
+			//计算总价
+			var price = num * parseInt(obj.parentElement.previousElementSibling.innerHTML);
+			
+			//将总价写入到总价单元格
+			obj.parentElement.nextElementSibling.innerHTML = price;
+			
+			total();
+		}
+		
+		function total(){
+			//获取总金额所在的单元格
+			var total = document.getElementById('total');
+//			console.log(total);
+			//获取总价所在的单元格
+			var money = document.getElementsByClassName('money');
+			
+			var sum = 0;
+			//遍历money中的值，求和
+			for(var i=0;i<money.length;i++){
+				sum = sum + parseInt(money[i].innerHTML);
+			}
+			//将总金额写入到总金额的单元格中
+			total.innerHTML = sum;
+		}
+	</script>
+	
+</body>
+</html>

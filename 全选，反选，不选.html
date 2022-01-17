@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	爱好:
+	<input type="checkbox" name="hobby" value="opt1">选项1
+	<input type="checkbox" name="hobby" value="opt2">选项2
+	<input type="checkbox" name="hobby" value="opt3">选项3
+	<input type="checkbox" name="hobby" value="opt4">选项4
+	<input type="checkbox" name="hobby" value="opt5">选项5
+	
+	<hr>
+	
+	<input type="radio" name="btn">全选
+	<input type="radio" name="btn">不选
+	<input type="radio" name="btn">反选
+
+		
+	<script>
+		var btns = document.getElementsByName('btn');
+		var opts = document.getElementsByName('hobby');
+		//全选效果
+		btns[0].onclick = function(){
+			//遍历opts结合
+			for(var i=0;i<opts.length;i++){
+				opts[i].checked = true;
+			}
+		}
+		
+		//不选效果
+		btns[1].onclick = function(){
+			//遍历opts结合
+			for(var i=0;i<opts.length;i++){
+				opts[i].checked = false;
+			}
+		}
+		
+		//反选效果
+		btns[2].onclick = function(){
+			for(var i=0;opts.length;i++){
+//				if(opts[i].checked){
+//					opts[i].checked = false;
+//				}else{
+//					opts[i].checked = true;
+//				}
+				
+				opts[i].checked = !opts[i].checked;
+			}
+		}
+	</script>
+</body>
+</html>
