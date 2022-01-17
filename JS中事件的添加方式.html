@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		div{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<button>删除事件</button>
+	<div onClick="fn()"></div>
+	
+	<h1 onClick="printContent(this)">我是一级标题</h1>
+	<h2 onClick="printContent(this)">我是二级标题</h2>
+	
+	
+	
+	<script>
+		/*
+			1.什么是事件：所谓事件就是网页或浏览器自身的某些行为，如点击鼠标，敲击键盘，刷新网页
+			2.JS中如何添加事件
+				a.HTML事件处理程序
+					添加格式：<开始标签 on事件名称="事件处理名称()"></结束标签>
+					删除格式：元素节点.removeAttribute('on事件名称')；
+					this的使用:如果在事件处理函数的小括号中使用this，那么这个this代表的是当前事件应用的那个元素
+				b.DOM0级事件处理程序
+				c.DOM2级事件处理程序
+		*/
+		function fn(){
+			console.log(123);
+		}
+		
+		//点击按钮删除div身上的事件
+		var btn = document.querySelector('button');
+		var div = document.querySelector('div');
+		btn.onclick = function(){
+			div.removeAttribute('onclick');
+		}
+		
+		function printContent(obj){
+			console.log(obj.innerHTML)
+		}
+	</script>
+</body>
+</html>

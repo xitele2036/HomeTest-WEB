@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: aqua;
+		}
+	</style>
+</head>
+
+<body>
+	<button>删除事件</button>
+	<div id="box">hello</div>
+	
+	
+	
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	
+	<h1>我是一级标题</h1>
+	<script>
+		/*
+			JS中添加事件的方式2--DOM0级事件处理程序
+			1.添加方式
+				添加方式1：元素节点.on事件名称 = function(){};
+				添加方式2：元素节点.on事件名称 = 事件处理函数名称(注意函数名后不加括号)；	
+			2.删除方式：元素节点.on事件名称 = null;	
+			3.DOM0级事件处理程序中this的使用：在其对应的事件处理函数中直接使用this即可，这个this代表的就是当前事件应用到的元素
+			4.注意：如果一个元素被添加了多个相同的事件，那么后面添加的事件会覆盖前面的事件
+		*/
+		
+		var div = document.getElementById('box');
+//		div.onclick = function(){
+//			console.log('hello');
+//		};
+		
+//		div.onclick = fn;
+//		
+//		function fn(){
+//			console.log('world');
+//		};
+//		
+//		
+//		var btn = document.getElementsByTagName('button')[0];
+//		btn.onclick = function(){
+//			div.onclick = null;
+//		}
+		
+//		div.onclick = function(){
+//			console.log('我的div身上的事件只能执行一次');
+//			div.onclick = null;
+//			
+//		}
+		
+		
+//		div.onclick = function(){
+//			console.log(this.innerHTML);
+//		};
+//		
+//		
+//		var lis = document.getElementsByTagName('li');
+//		for(var i=0;i<lis.length;i++){
+//			lis[i].onclick = function(){
+//				console.log(this.innerHTML);
+//			};
+//			
+//		};
+		
+		var h1 = document.getElementsByTagName('h1')[0];
+		h1.onclick = function(){
+			console.log('hello');
+		};
+		
+		h1.onclick = function(){
+			console.log('world');
+		};
+	</script>
+</body>
+</html>

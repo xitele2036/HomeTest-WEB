@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		#box{
+			width: 200px;
+			height: 300px;
+			background-color: red;
+			padding: 50px;
+			border: 5px solid;
+			margin: 20px;
+			overflow: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box">测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本</div>
+	<script>
+		/*
+			offsetWidth: 返回元素的宽度(包括元素宽度，内边距和边框，不包括外边距，不受滚动条影响)
+			offsetHeight: 返回元素的高度(包括元素高度，内边距和边框，不包括外边距，不受滚动条影响)
+			clientWidth: 返回元素的宽度(包括元素宽度，内边距，不包括边框和外边距,受滚动条影响)
+			clientHeight: 返回元素的高度(包括元素高度，内边距，不包括边框和外边距，受滚动条影响)
+			
+			注意：
+			1.如果获取页面视口的宽度和高度，那么推荐使用clientWidth和clientHeight，如果要获取元素的宽度和高度推荐使用offsetWidth和offsetHeight
+			2.如果要获取视口的宽度和高度，需要采用如下方式：
+			视口宽度：var 变量名称 = document.documentElement.clientWidth || document.body.clientWidth;
+			视口高度：var 变量名称 = document.documentElement.clientHeight || document.body.clientHeight;
+		*/
+		
+		var div = document.querySelector('#box');
+		console.log('offsetWidth ' + div.offsetWidth);
+		console.log('offsetHeight ' + div.offsetHeight);
+		
+		console.log('clientWidth ' + div.clientWidth);
+		console.log('clientHeight ' + div.clientHeight);
+		
+		
+		
+		var viewWidth = document.documentElement.clientWidth || document.body.clientWidth;
+		var viewHeight = document.documentElement.clientHeight || document.body.clientHeight;
+		
+		
+		console.log(viewWidth,viewHeight);
+	</script>
+</body>
+</html>
