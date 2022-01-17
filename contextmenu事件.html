@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	
+	<script>
+		//当前页面
+		document.oncontextmenu = function(e){
+			e = e || window.Event;
+			e.preventDefault == undefined ? e.returnValue=false : e.preventDefault();
+			console.log('hello');
+		};
+	</script>
+</body>
+</html>
