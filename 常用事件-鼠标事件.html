@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: antiquewhite;
+		}
+		#inner{
+			width: 100px;
+			height: 100px;
+			background-color: aqua;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<div id="inner"></div>
+	</div>
+	
+	
+	<script>
+		var div =document.querySelector('div');
+		
+		
+//		//click事件
+//		div.onclick = function(e){
+//			console.log(e.type);
+//		};
+//		
+//		//dbclick事件
+//		div.ondblclick = function(e){
+//			console.log(e.type);
+//		};
+		
+//		//mouseover事件，如果有后代元素，在进入后代元素或从后代元素进入自身使，会多次触发该事件
+//		div.onmouseover = function(e){
+//			console.log(e.type);
+//		};
+//		
+//		//mouseout事件，如果有后代元素，在进入后代元素或从后代元素进入自身使，会多次触发该事件
+//		div.onmouseout = function(e){
+//			console.log(e.type);
+//		};
+//		
+		
+//		//mouseenter事件，如果有后代元素不会重复触发
+//		div.onmouseenter = function(e){
+//			console.log(e.type);
+//		};
+//		
+//		//mouseleave事件，如果有后代元素不会重复触发
+//		div.onmouseleave = function(e){
+//			console.log(e.type);
+//		};
+		
+		//mousedown事件
+		div.onmousedown = function(e){
+			console.log(e.type);
+		};
+		
+		//mouseup事件
+		div.onmouseup = function(e){
+			console.log(e.type);
+		};
+		
+		//mousemove事件
+		div.onmousemove = function(e){
+			console.log(e.type);
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		document.onkeydown = function(e){
+			console.log(e.type);
+		};
+		
+		document.onkeypress = function(e){
+			console.log(e.type);//只支持字符键，不支持功能键
+		};
+		
+		document.onkeyup = function(e){
+			console.log(e.type);
+		};
+	</script>
+</body>
+</html>

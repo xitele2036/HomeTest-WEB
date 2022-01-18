@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		div{
+			width: 300px;
+			height: 400px;
+			background-color: aquamarine;
+			white-space: nowrap;
+			overflow: auto;
+		}
+		
+		body{
+			height: 3000px;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div>测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本</div>
+	
+	<script>
+		var div = document.querySelector('div');
+		
+		//给页面元素加scroll事件
+//		div.onscroll = function(e){
+//			console.log(e.type);
+//		};
+		
+		//如果给页面绑定滚动事件，即拉动页面的滚动条时触发该事件
+//		window.onscroll = function(e){
+//			console.log(e.type);
+//		};
+		
+		/*
+			滚动事件常结合scrollTop/scrollLeft两个属性使用
+			scrollTop：该属性是用来设置或者获取在拉动滚动条时被卷上去的内容的高度,结果为数值
+			scrollLeft：该属性是用来设置或者获取在拉动滚动条时被卷到左边的内容的宽度，结果为数值
+		*/
+		
+//		div.onscroll = function(){
+//			console.log(div.scrollTop);
+//		};
+//		
+//		div.onscroll = function(){
+//			console.log(div.scrollLeft);
+//		};
+//		
+		/*
+			在使用scrollTop/scrollLeft时需要注意，在拉动窗口的滚动条时，如果要获取被卷上去的内容的高度，那么不可以使用window.scrollTop.因为window没有scrollTop/scrollLeft属性，此时要获取scrollTop/scrollLeft的值，需要给document.documentElement.scrollTop || document.body.scrollTop
+		*/
+		
+		window.onscroll = function(){
+			var obj  = document.documentElement || document.body;
+			console.log(obj.scrollTop);
+		};
+	</script>
+</body>
+</html>

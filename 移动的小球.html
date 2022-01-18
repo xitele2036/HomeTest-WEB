@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#ball{
+			width: 200px;
+			height: 200px;
+			background-color: lawngreen;
+			border-radius: 50%;
+			position: fixed;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div id="ball"></div>
+	
+	<script>
+		//获取div
+		var ball = document.getElementById('ball');
+		
+		//为document节点添加方式
+		document.onkeydown = function(e){
+			//获取div当前css样式对象
+			var sty = getstyle(ball);
+			
+			//获取事件对象
+			e = e || window.event;
+			
+			
+			//判断按了键盘上的哪个按键
+			switch(e.keyCode){
+				case 37:
+					console.log('左');
+					ball.style.left = parseInt(sty.left) - 10 + 'px';
+					break;
+				case 38:
+					console.log('上');
+					ball.style.top = parseInt(sty.top) - 10 + 'px';
+					break;
+				case 39:
+					console.log('右');
+					ball.style.left = parseInt(sty.left) + 10 + 'px';
+					break;
+				case 40:
+					console.log('下');
+					ball.style.top = parseInt(sty.top) + 10 + 'px';
+					break;
+			};
+		};
+		
+		//定义方法，获取div外部或内部样式
+		function getstyle(ele){
+			if(window.getComputedStyle == undefined){
+				return ele.currentStyle;
+			}else{
+				return window.getComputedStyle(ele,null);
+			}
+		}
+		
+	</script>
+</body>
+</html>

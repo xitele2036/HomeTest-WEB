@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		ul{
+			list-style: none;
+			background-color: #ccc;
+			width: 150px;
+			position: fixed;
+			left: 0;
+			top:0;
+			padding-left: 30px;
+			display: none;
+		}
+		
+		li{
+			line-height: 2.5em;
+			background-color: #eee;
+			padding-left: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<ul id="menu">
+		<li>复制</li>
+		<li>剪切</li>
+		<li>粘贴</li>
+	</ul>
+	
+	<script>
+		var ul = document.getElementById('menu');
+		
+		//为document添加鼠标右击事件
+		document.oncontextmenu = function(e){
+			e = e || window.event;
+			
+			//取消默认行为
+			e.preventDefault == undefined ? e.returnValue=false : e.preventDefault();
+			
+			//显示菜单
+			ul.style.display = 'block';
+			
+			//获取当前点击的点距离视口的距离
+			var x = e.clientX;
+			var y = e.clientY;
+			
+			//设置菜单的left和top值
+			ul.style.left = x + 'px';
+			ul.style.top = y + 'px';
+		};
+		
+		
+		//点击鼠标左键时隐藏菜单
+		document.onclick = function(){
+			ul.style.display = 'none';
+		}
+		
+		//设置鼠标移过li时变色
+		var lis = document.getElementsByTagName('li');
+		
+		for(var i=0;i<lis.length;i++){
+			lis[i].onmouseover = function(){
+				this.style.backgroundColor = '#ccc';
+			}
+			lis[i].onmouseout = function(){
+				this.style.backgroundColor = '#eee';
+			}
+		}
+		
+	</script>
+</body>
+</html>

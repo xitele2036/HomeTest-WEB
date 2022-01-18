@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		#red{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+		}
+		#green{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		#blue{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+		div {
+			margin: 50px auto;
+			padding-top: 0.1px;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="red">
+		<div id="green">
+			<div id="blue"></div>
+		</div>
+	</div>
+	
+	<script>
+		var red = document.getElementById('red');
+		var green = document.getElementById('green');
+		var blue = document.getElementById('blue');
+		
+		blue.addEventListener('click',function(e){
+			e = e || window.Event;
+			e.stopPropagation();
+			console.log('blue');
+		},false);
+		
+		green.addEventListener('click',function(e){
+			e = e || window.Event;
+			e.stopPropagation();
+			console.log('green');
+		},false);
+		
+		red.addEventListener('click',function(e){
+			e = e || window.Event;
+			//阻断冒泡
+//			e.stopPropagation();
+			
+			//阻断冒泡兼容写法
+			e.stopPropagation == undefined ? e.cancelBubble = true : e.stopPropagation();
+			
+			console.log('red');
+		},false);
+
+	</script>
+</body>
+</html>

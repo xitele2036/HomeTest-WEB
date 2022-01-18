@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: brown;
+			position: fixed;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box"></div>
+	
+	<script>
+		var div = document.querySelector('#box');
+		
+		//为div添加mousedown事件
+		div.onmousedown = function(e){
+			e = e || window.event;
+			//获取鼠标点击的点距离自身的距离
+			var div_x = e.offsetX;
+			var div_y = e.offsetY;
+			
+			//为document对象添加mousemove事件
+			document.onmousemove = function(e){
+				e = e || window.event;
+				//获取鼠标点击的点距离视口的左侧和顶端的距离
+				var body_x = e.clientX;
+				var body_y = e.clientY;
+				console.log(body_x,body_y);
+				
+				//设置div的left属性和top属性的值
+				div.style.left = (body_x - div_x) + 'px';
+				div.style.top = (body_y - div_y) + 'px';
+			};
+		};
+		
+		//为div设置mouseup事件
+		div.onmouseup = function(){
+			document.onmousemove = null;
+		};
+	</script>
+</body>
+</html>

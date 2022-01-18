@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	用户名：
+	<input type="text" name="userName">
+	
+	<script>
+		var input = document.querySelector('input');
+		
+		//oninput事件，当表单元素中的内容变化就会触发
+		input.oninput = function(e){
+			console.log(e.type);
+		};
+		
+		
+		//change事件，当表单元素中内容变化，且失去焦点时触发
+		input.onchange = function(e){
+			console.log(e.type);
+		};
+		
+		input.onblur = function(e){
+			console.log(e.type);
+		};
+	</script>
+</body>
+</html>

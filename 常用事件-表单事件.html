@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	用户名:
+	<input type="text" name="userName">
+	
+	<script>
+		var input= document.querySelector('input');
+		
+		//onfocus事件，获取焦点
+		input.onfocus = function(e){
+			console.log(e.type);
+		};
+		
+		//onblur事件，失去焦点
+		input.onblur = function(e){
+			console.log(e.type);
+		};
+	</script>
+</body>
+</html>
