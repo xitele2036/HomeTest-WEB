@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		body{
+			height: 3000px;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: aqua;
+		}
+	</style>
+</head>
+
+<body>
+	<!--
+		bubbles属性的作用就是用来判断当前事件是否支持事件冒泡，如果是结果为true，否则结果时false
+
+	-->
+	<div></div>
+	<script>
+//		document.addEventListener('click',function(e){
+//			console.log(e.bubbles);
+//		},false);
+//		
+//		document.documentElement.addEventListener('click',function(e){
+//			console.log(e.bubbles);
+//		},false);
+//		
+//		document.body.addEventListener('click',function(e){
+//			console.log(e.bubbles);
+//		},false);
+		
+		var div = document.querySelector('div');
+		div.onmouseover = function(e){
+			console.log('onmouseover移入事件被触发了');
+			console.log(e.bubbles);
+		};
+		
+		div.onmouseenter = function(e){
+			console.log('onmouseenter移入事件被触发了');
+			console.log(e.bubbles);
+		};
+	</script>
+</body>
+</html>

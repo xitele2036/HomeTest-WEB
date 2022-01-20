@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		body{
+			background-color:mediumaquamarine;
+		}
+		#userNameInfo,#psdInfo{
+			color: red;
+			font-size: 14px;
+			font-style: italic;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>表单校验</h1>
+	<form action="OK.html">
+		<table>
+			<tr>
+				<tb>用户名：</tb>
+				<tb><input type="text" name="userName" id="userName"></tb>
+				<tb id="userNameInfo"></tb><br>
+			</tr>
+			<tr>
+				<tb>密 码：</tb>
+				<tb><input type="password" name="psd" id="psd"></tb>
+				<tb id="psdInfo"></tb><br>
+			</tr>
+			<tr>
+				<tb><button>提交</button></tb>
+				<tb></tb>
+				<tb></tb>
+			</tr>
+		</table>
+	</form>
+	
+	<script>
+		//获取页面元素
+		var userName = document.querySelector('#userName');
+		var psd = document.querySelector('#psd');
+		var userNameInfo = document.querySelector('#userNameInfo');
+		var psdInfo = document.querySelector('#psdInfo');
+		var form = document.querySelector('form');
+		
+		//设置用户名和密码框获取焦点时的效果
+		userName.onfocus = function(){
+			userNameInfo.innerHTML = '用户名必须是admin'; 
+			//用户名清空
+			userName.value = '';
+		};
+		psd.onfocus = function(){
+			psdInfo.innerHTML = '密码必须是123456'; 
+			//密码清空
+			psd.value = '';
+		};
+		
+		
+		//设置用户名或密码框失去焦点时的效果
+		userName.onblur = checkUserName;
+		psd.onblur = checkPassword;
+		
+		//点击提交按钮时验证用户名或密码是否正确
+		form.onsubmit = checkAll;
+		
+		//定义函数，设置点击提交按钮时对用户名和密码框做同一验证的效果
+		function checkAll(){
+			//验证用户名
+			var res1 = checkUserName();
+			//验证密码
+			var res2 = checkPassword();
+			
+			return res1 && res2;
+		}
+		
+		
+		
+		//定义方法，功能是对用户名进行验证
+		function checkUserName(){
+			var str = userName.value.toLowerCase();
+			//验证用户名是否为空
+			if(str == ''){
+				userNameInfo.innerHTML = '用户名不可以为空'; 
+				return false;
+			};
+			//验证用户名是否合法
+			if(str == 'admin'){
+				userNameInfo.innerHTML = '√'; 
+				return true;
+			}else{
+				userNameInfo.innerHTML = '×'; 
+				return false;
+			};
+		};
+		
+		//定义方法，验证密码
+		function checkPassword(){
+			var str = psd.value.toLowerCase();
+			//验证用户名是否为空
+			if(str == ''){
+				psdInfo.innerHTML = '密码不可以为空'; 
+				return false;
+			};
+			//验证用户名是否合法
+			if(str == '123456'){
+				psdInfo.innerHTML = '√'; 
+				return true;
+			}else{
+				psdInfo.innerHTML = '×'; 
+				return false;
+			};
+		};
+		
+	</script>
+</body>
+</html>

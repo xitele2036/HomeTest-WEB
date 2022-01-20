@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		div{
+			width: 300px;
+			height: 200px;
+			background-color: coral;
+			position: fixed;
+			right: 0;
+			bottom: -200px;
+		}
+		span{
+			
+			width: 30px;
+			height: 30px;
+			float: right;
+			background-color: darkcyan;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 30px;
+			font-size: 16px;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div><span>×</span></div>
+	
+	<script>
+		//获取页面元素
+		var div = document.querySelector('div');
+		var span = document.querySelector('span');
+		
+		//启动定时器，调用moveDiv方法
+		var timer = setInterval(moveDiv,1);
+		
+		//设置div被关闭的效果
+		span.onclick = function(){
+			div.style.display = 'none';
+		}
+		
+		
+		//定义函数，使div向上移动
+		function moveDiv(){
+			//获取div当前的bottom
+			var div_bottom = parseInt(getStyle(div).bottom);
+			if(div_bottom != 0){
+				div.style.bottom = div_bottom + 1 + 'px';
+			}else{
+				//停止定时器
+				clearInterval(timer);
+			}
+		}
+		
+		//定义函数，获取内部样式表对象
+		function getStyle(ele){
+			if(window.getComputedStyle == undefined){
+				return ele.currentStyle;
+			}else{
+				return window.getComputedStyle(ele,null);
+			}
+		}
+	</script>
+</body>
+</html>

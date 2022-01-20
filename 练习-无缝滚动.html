@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		#box{
+			width: 500px;
+			height: 300px;   /*做无缝滚动要给高度，而且高度要小于内容的高度*/
+			border: 1px solid;
+			margin: 100px auto;
+			padding: 0 10px;
+			line-height: 2em;
+/*			overflow: scroll;*/
+			overflow: hidden;
+		}
+		ul{
+			list-style: none;
+		}
+		span{
+			margin-right: 10px;
+		}
+		a{
+			color: #000;
+			text-decoration: none;
+		}
+		a:hover{
+			color: red;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box">
+		<ul id="list">
+			<li><span>1</span><a href="">再塑党的形象的伟大工程</a></li>
+			<li><span>2</span><a href="">江歌母亲:接受一审判决 不上诉新</a></li>
+			<li><span>3</span><a href="">寻亲男孩决定起诉亲生父母热</a></li>
+			<li><span>4</span><a href="">31省份新增本土确诊55例 河南33例热</a></li>
+			<li><span>5</span><a href="">讲好冬奥故事 共赴冰雪之约</a></li>
+			<li><span>6</span><a href="">印度宣布将于2030年建设空间站</a></li>
+			<li><span>7</span><a href="">再塑党的形象的伟大工程</a></li>
+			<li><span>8</span><a href="">江歌母亲:接受一审判决 不上诉新</a></li>
+			<li><span>9</span><a href="">寻亲男孩决定起诉亲生父母热</a></li>
+			<li><span>10</span><a href="">31省份新增本土确诊55例 河南33例热</a></li>
+			<li><span>11</span><a href="">讲好冬奥故事 共赴冰雪之约</a></li>
+			<li><span>12</span><a href="">印度宣布将于2030年建设空间站</a></li>
+		</ul>
+	</div>
+	
+	
+	<script>
+		/*
+			无缝滚动效果注意：
+			1.要给容器添加高度，高度要小于内容的高度
+			2.设置scrollTop属性时，一定时给容器加的
+			3.一定要设置overflow属性
+				
+		*/
+		
+		
+		//获取页面的ul节点
+		var div = document.getElementById('box');
+		var ul = document.getElementById('list');
+		//获取ul下面的内容
+		var content = ul.innerHTML;
+		//修改ul的内容，使其内容是原来的两倍
+		ul.innerHTML = ul.innerHTML + content;
+		
+		//启动定时器，调用moveUp
+		var timer = setInterval(moveUp,100);
+		
+		//设置鼠标移入和移除效果
+		div.onmouseover = function(){
+			clearInterval(timer);
+		};
+		
+		div.onmouseout = function(){
+			clearInterval(timer);
+			timer = setInterval(moveUp,100);
+		};
+		
+		//定义方法，使div中的内容可以向上滚动
+		function moveUp(){
+			if(div.scrollTop > ul.offsetHeight/2){
+			   div.scrollTop = 0;
+			}else{
+			   div.scrollTop = div.scrollTop + 10;
+			};
+			
+		};
+	</script>
+	
+</body>
+</html>

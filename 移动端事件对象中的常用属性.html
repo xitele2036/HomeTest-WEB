@@ -18,9 +18,26 @@
 		touchmove事件：当手指在屏幕或指定元素上移动时触发
 		touchend事件：当手指从屏幕上离开时触发
 		touchcancel事件：当系统停止跟踪触摸式触发(如电话接入或者弹出信息，一般在这个操作中来做一些暂停游戏类的操作或者点击通知)
+
+
+		touches: TouchList {0: Touch, length: 1}:该属性中主要保存存放在屏幕上的所有触摸点的相关信息
+		targetTouches: TouchList {0: Touch, length: 1}:该属性中主要保存了和当前元素相关的触摸点信息
+		changedTouches: TouchList {0: Touch, length: 1}:该属性中主要保存了由触摸点变化形成的信息
+		
+		
 	-->
 	
 	<div></div>
 	
+	
+	<script>
+		var div = document.querySelector('div');
+		
+		div.ontouchend = function(e){
+//			console.log(e.touches[0].screenX);
+//			console.log(e.targetTouches);
+			console.log(e);
+		};
+	</script>
 </body>
 </html>

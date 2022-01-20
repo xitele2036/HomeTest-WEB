@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			window:在众多属性中，
+			1.window属性是BOM中的顶级对象，其他对象都是window对象的属性，只是自身也是对象类型,
+			2.window对象也是一个全局对象，因为在全局作用域下面定义的所有变量，方法都相等于给window对象绑定的属性或方法，可以使用window.的形式来使用这些属性和方法,在平时使用时可以将window省略，
+			3.如果是全局的变量或方法，还可以使用this，因为在全局环境下window == this。
+			4.window对象不需要手动创建，当浏览器窗口被打开时，后台会自动创建一个用来管理当前窗口的window对象，窗口被关闭时，window自动销毁
+			
+		*/
+	
+		
+		var num = 2;
+		
+		function fn(){
+			console.log(2.2);
+			
+		}
+		
+		console.log(window.num);
+		window.fn();
+	</script>
+	
+	
+</body>
+</html>

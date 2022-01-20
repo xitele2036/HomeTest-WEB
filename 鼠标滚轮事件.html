@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--		
+	mousewheel事件：鼠标滚动事件，其事件对象中的button属性的值为0
+	DOMMouseScroll事件，只是适用于火狐浏览器，需要使用DOM2级程序来添加，该事件对象中有detail属性，该属性可以用来判断滚轮滚动的方向，3 -3
+-->
+	<script>
+//		document.onmousewheel = function(e){
+//			console.log(e.type);
+//		};
+		
+//		document.onmousewheel = function(e){
+//			console.log(e.wheelDelta);//该属性的值在不同浏览器下面的值是不同的120 -120
+//		};
+		
+		
+		document.addEventListener('DOMMouseScroll',function(e){
+			console.log('hello');
+		},false);
+	</script>
+</body>
+</html>

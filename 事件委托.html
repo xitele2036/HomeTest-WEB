@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	
+	<script>
+		/*
+			什么是事件委托：事件委托也被称为事件代理，就是指将事件委托给祖先元素，然后利用事件冒泡机制和事件对象让该祖先元素的下面所有后代元素可以具有用一类型的事件
+		*/
+		
+		var lis = document.querySelectorAll('li');
+		var ul = document.querySelector('ul');
+//		for(var i=0;i<lis.length;i++){
+//			lis[i].onclick = function(){
+//				console.log(this.innerHTML);
+//			};
+//		};
+		
+		//事件委托
+		ul.onclick = function(e){
+			console.log(e.target.innerHTML);
+		};
+//		
+		//事件委托的好处
+//		var lis = document.querySelectorAll('li');
+		
+//		for(var i=0;i<lis.length;i++){
+//			lis[i].onclick = function(){
+//				console.log(this.innerHTML);
+//			};
+//		};
+		
+		var newLi = document.createElement('li');
+		newLi.innerHTML = '我是新的li';
+		
+		ul.appendChild(newLi);
+	</script>
+</body>
+</html>

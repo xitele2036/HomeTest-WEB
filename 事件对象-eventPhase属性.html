@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		#red{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+		}
+		#green{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			
+		}
+		#blue{
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+		}
+		div{
+			margin: 50px auto;
+			padding-top: 0.1px;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="red">
+		<div id="green">
+			<div id="blue"></div>
+		</div>
+	</div>
+	
+	
+	<script>
+		/*
+			eventPhase属性，该属性的值为1,2,3
+			1：表示由事件捕获而引起的事件的执行
+			2：表示事件流中的当前元素
+			3：表示由事件冒泡而引起的事件的执行
+		*/
+		
+		var red = document.querySelector('#red');
+		var green = document.querySelector('#green');
+		var blue = document.querySelector('#blue');
+		
+		red.addEventListener('click', function(e){
+			console.log(e.eventPhase);
+		},true);
+		
+		green.addEventListener('click', function(e){
+			console.log(e.eventPhase);
+		},true);
+		
+		blue.addEventListener('click', function(e){
+			console.log(e.eventPhase);
+		},true);
+	</script>
+</body>
+</html>

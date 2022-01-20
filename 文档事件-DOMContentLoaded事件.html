@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	
+	<img src="https://i.natgeofe.com/n/46b07b5e-1264-42e1-ae4b-8a021226e2d0/domestic-cat_thumb_square.jpg" alt="">
+<!--	<img src="https://img1.baidu.com/it/u=4048001532,4272093971&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="">-->
+	
+	<script>
+		/*
+			DOMContentLoaded事件：该事件和load事件类似，但是该事件的触发时间要早于load事件，因为该事件会在DOM树渲染完毕后触发，而load事件只有在整个文档加载完毕后触发,注意DOMContentLoaded事件需要使用addEventListener方法来加
+		*/
+		
+//		window.onDOMContentLoaded = function(){
+//			console.log('DOM树渲染完毕');
+//		};
+		
+		
+//		window.addEventListener('DOMContentLoaded',function(){
+//			console.log('DOM树渲染完毕');
+//		},false);
+//	
+		window.onload = function(){
+			console.log('文档加载完毕');
+//			document.write("菜鸟教程 -- 学的不仅是技术，更是梦想！！！");
+			alert("123");
+		};
+//		console.log('文档加载完毕');
+//		window.onload = function(){
+//		  console.log('window.onload加载1');
+//		}
+//		window.onload = function(){
+//		  console.log('window.onload加载2');
+//		}
+//		window.onload = function(){
+//		  console.log('window.onload加载3');
+//		}
+	</script>
+</body>
+</html>
