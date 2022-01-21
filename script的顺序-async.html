@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--	 async属性:DOM加载和js脚本加载异步执行，同时进行-->
+<!--	 async优势:避免了因DOM文件过大导致的，文件加载阻塞 -->
+<!--	 async缺陷:无法确定js脚本到底何时执行，并仅对外部js脚本生效-->
+	
+	<script>
+//		setInterval(function(){
+//			console.log('hello');
+//		},1000);
+//		
+//		setInterval(function(){
+//			console.log('world');
+//		},1000);
+	</script>
+	
+	
+	<script src="test1.js" async></script>
+	<script src="test2.js" async></script>
+	<script src="test3.js" async></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<select name="province" id="province"><option value="">请选择</option></select>
+	<span>省</span>
+	<select name="city" id="city"><option value="">请选择</option></select>
+	<span>市</span>
+	<select name="district" id="district"><option value="">请选择</option></select>
+	<span>区</span>
+	
+	
+	<script>
+		//定义数据
+		var provinceData = ['吉林省','辽宁省','黑龙江省'];
+		var cityData = [
+			['长春市','吉林市','四平市'],
+			['沈阳市','大连市','盘锦市'],
+			['黑河市','哈尔滨市','齐齐哈尔市']
+		];
+		var districtData = [
+			[
+				['长春一区','长春二区','长春三区','长春四区','长春五区','长春六区'],
+				['吉林一区','吉林二区','吉林三区','吉林四区','吉林五区','吉林六区'],
+				['四平一区','四平二区','四平三区','四平四区','四平五区','四平六区']
+			],
+			[
+				['沈阳一区','沈阳二区','沈阳三区','沈阳四区','沈阳五区','沈阳六区'],
+				['大连一区','大连二区','大连三区','大连四区','大连五区','大连六区'],
+				['盘锦一区','盘锦二区','盘锦三区','盘锦四区','盘锦五区','盘锦六区']
+			],
+			[
+				['黑河一区','黑河二区','黑河三区','黑河四区','黑河五区','黑河六区'],
+				['哈尔滨一区','哈尔滨二区','哈尔滨三区','哈尔滨四区','哈尔滨五区','哈尔滨六区'],
+				['齐齐哈尔一区','齐齐哈尔二区','齐齐哈尔三区','齐齐哈尔四区','齐齐哈尔五区','齐齐哈尔六区']
+			]
+		];
+		
+		//获取页面节点
+		var province = document.getElementById('province');
+		var city = document.getElementById('city');
+		var district = document.getElementById('district');
+		
+		//创建省
+		for(var i=0;i<provinceData.length;i++){
+			//创建option
+			var opt = document.createElement('option');
+			//为option添加value属性
+			opt.value = i;
+			//为option添加文本内容
+			opt.innerHTML = provinceData[i];
+			//将option添加到select中
+			province.appendChild(opt);
+		};
+		
+		//显示城市
+		province.onchange = changeCity;
+		//显示区
+		city.onchange = changeDistrict;
+		
+		var provinceValue;
+		
+		function changeCity(){
+			//获取省份的value
+			provinceValue = province.value;//0
+			
+			//将城市节点中的选项只保留一个
+			city.length = 1;
+			//将区节点中的选项只保留一个
+			district.length = 1;
+			
+			if(provinceValue != ''){
+				for(var i=0;i<cityData[provinceValue].length;i++){
+				//创建option
+				var opt = document.createElement('option');
+				//添加value属性
+				opt.value = i;
+				//添加内容
+				opt.innerHTML = cityData[provinceValue][i];
+				//将option添加到城市节点中
+				city.appendChild(opt);
+				};
+			};
+			
+		};
+		
+		function changeDistrict(){
+			//获取市的value
+			var cityValue = city.value;//0
+			//将区节点中的选项只保留一个
+			district.length = 1;
+			if(cityValue != ''){
+				for(var i=0;i<districtData[provinceValue][cityValue].length;i++){
+				//创建option
+				var opt = document.createElement('option');
+				//添加value属性
+				opt.value = i;
+				//添加内容
+				opt.innerHTML = districtData[provinceValue][cityValue][i];
+				//将option添加到城市节点中
+				district.appendChild(opt);
+				};
+			};
+		};
+	</script>
+</body>
+</html>

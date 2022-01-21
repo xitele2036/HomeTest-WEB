@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>窗口2</title>
+</head>
+
+<body>
+	<script>	
+		/*
+			name属性：该属性是window对象的一个属性，默认值为空字符串，该属性可以用来在不同窗口间进行数据的传递
+		
+		*/
+		
+		//定义数据
+		var str = 'hello';
+		//设置name属性的值
+		window.name = str;
+		
+		console.log(window.name);
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		div{
+			width: 300px;
+			height: 200px;
+			background-color: royalblue;
+			overflow: scroll;
+		}
+	</style>
+</head>
+
+<body>
+	<div>测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本</div>
+	<script>
+		/*
+			outerHeight:设置或返回窗口的外部高度，包括所有的界面元素（工具栏、滚动条）
+			outerWidth:设置或返回窗口的外部宽度，包括所有的界面元素（工具栏、滚动条）
+			innerHeight:返回文档显示区的高度
+			innerWidth:返回文档显示区的宽度
+		*/
+		
+		var div = document.querySelector('div');
+		
+		var width = div.offsetWidth;
+		var height = div.offsetHeight;
+		
+		console.log(width , height);
+		
+		var outerH = div.outerHeight;
+		var outerW = div.outerWidth;
+		console.log(outerW , outerH);
+		
+		
+		
+//		document.documentElement.clientHeight || document.body.clientHeight || window.innerHeight
+	</script>
+</body>
+</html>

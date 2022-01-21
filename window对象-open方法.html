@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<button>打开一个空白窗口</button><br>
+	<button>打开一个指定窗口</button>
+	<script>
+		/*
+			open:
+			1.作用：打开新窗口
+			2.格式：window.open('地址','窗口名称','窗口特性')，三个参数都可以省略，如果省略表示打开空白窗口
+			3.参数说明：
+				1.窗口名称可以不写，如果不写，那么会多次打开新窗口，如果写，那么会打开一次新窗口，后面执行open方法时会在上一次打开的窗口里面重新加载页面
+				2.窗口特性"width=xxx eight=xxx top=xxx left=xxx"
+			4.返回值：返回值代表新窗口的window对象
+		*/
+		
+		
+		var btn = document.querySelectorAll('button');
+		
+		//打开空白窗口
+		btn[0].onclick = function(){
+			var newWindow = window.open();
+			
+			newWindow.document.write('<h1><i>我是新窗口</i></h1>');
+			newWindow.document.body.style.background = 'red';
+		};
+		
+		btn[1].onclick = function(){
+			window.open('OK.html','NONO','width=500 height=500');
+		}
+	
+	</script>
+</body>
+</html>
