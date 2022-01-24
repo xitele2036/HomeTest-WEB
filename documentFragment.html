@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+//		var ul = document.createElement('ul');
+//		
+//		document.body.appendChild(ul);
+//		
+//		for(var i=0;i<100;i++){
+//			var li = document.createElement('li');
+//			li.innerHTML = `我是第${i}个li`;
+//			ul.appendChild(li);
+//		}
+		
+		var ul = document.createElement('ul');
+		
+		var flag = document.createDocumentFragment();//创建文档碎片
+		
+		for(var i=0;i<100;i++){
+			var li = document.createElement('li');
+			var liText = document.createTextNode(i);
+			li.appendChild(liText);
+			flag.appendChild(li);
+		};
+		
+		ul.appendChild(flag);
+		document.body.appendChild(ul);
+	</script>
+</body>
+</html>

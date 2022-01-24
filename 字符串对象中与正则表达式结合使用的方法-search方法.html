@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			search方法：
+			1.作用:在字符串中查找某个字串，类似于indexOf
+			2.格式:字符串.search('子串');
+			3.注意:search方法当找到第一个匹配的子串后停止匹配
+		*/
+		
+		var str = 'he1ll2ow3orld';
+		var reg = /o/g;
+		var res = str.search(reg);
+	
+		console.log(res);
+	</script>
+</body>
+</html>
