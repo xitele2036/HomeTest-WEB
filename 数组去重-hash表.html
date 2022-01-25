@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+//		利用splice方法对数组进行去重
+		var arr = [1,2,1,3,2,3,3,4,4,5,1,2,3,5,6];
+		var newArr = [];
+		var obj = {};
+		
+		for(var i=0;i<arr.length;i++){
+			if(!obj[arr[i]]){//判断有么有arr[i]这个数组元素
+				newArr.push(arr[i]);
+				obj[arr[i]] = 888;
+			}
+		}
+		
+		
+		console.log(newArr);
+	</script>
+</body>
+</html>

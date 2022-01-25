@@ -1,0 +1,54 @@
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: boborder-box;	
+}
+
+#box {
+	width: 790px;
+	height: 340px;
+	margin: 100px auto;
+	position: relative;
+}
+ul {
+	list-style: none;
+	position: absolute;
+	bottom: 25px;
+	right: 220px;
+	
+}
+li {
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: aquamarine;
+	color: #fff;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 10px;
+}
+ul li:first-of-type{
+	background-color: #FF0000;
+}
+
+span{
+	width: 40px;
+	height: 80px;
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	top:130px;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	line-height: 80px;
+	display: none;
+}
+#box span:first-of-type{
+	left: 0;
+}
+#box span:last-of-type{
+	right: 0;
+}
