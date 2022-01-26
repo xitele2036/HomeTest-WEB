@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		var arr = [45,12,99,85,10,98,25,66];
+		
+		//定义函数，功能是利用快速排序
+		
+		function quicksort(myArr){
+			//判断数组的长度是否为0或1，如果是1或0，那么这样的数组不需要排序，直接返回即可
+			if(myArr.length <= 1){
+				return myArr;
+			}
+			
+			
+			//获取数组中基准值的下标（中间下标）
+			var index = Math.floor(myArr.length / 2);
+			//根据下标获取中间值，并删除中间值
+			var mid = myArr.splice(index,1);
+			
+			//定义两个空数组，用来接收比中间值小的数据和比中间值大的数据
+			var left = [];
+			var right = [];
+			
+			//遍历数组，用数组中剩余的元素和中间值比较，如果比中间值小，则放到left中，如果比中间值大则放到right数组中
+			for(var i=0;i<myArr.length;i++){
+				//判断数组元素是否比中间值小
+				if(myArr[i] < mid){
+					left.push(myArr[i]);
+				}
+				
+				//判断数组元素是否比中间值大
+				if(myArr[i] > mid){
+					right.push(myArr[i]);
+				}
+			};
+			
+//			console.log(left);
+//			console.log(right);
+
+			
+			return quicksort(left).concat(mid,quicksort(right));
+		}
+		
+		var res = quicksort(arr);
+		console.log(res);
+	</script>
+</body>
+</html>
