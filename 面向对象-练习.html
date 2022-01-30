@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		function Rect(width,height){
+			this.width = width;
+			this.height = height;
+			
+			this.l = function(){
+				return this.width*2 + this.height*2;
+			};
+		}
+		
+		var rec = new Rect(50,20);
+		console.log(rec.l());
+		
+		function BingXiang(brand,price){
+			this.brand = brand;
+			this.price = price;
+			
+			this.baoxian = function(){
+				console.log('保鲜');
+			};
+		}
+		
+		var b1 = new BingXiang('AAA',1000);
+		console.log(b1.baoxian());
+		console.log(b1.brand);
+		console.log(b1.price);
+		
+	</script>
+</body>
+</html>

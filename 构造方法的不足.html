@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			
+		*/
+		
+		function Student(name,age,gender,id){
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			this.id = id;
+			
+			this.study = function(){
+				console.log('web');
+			};
+			
+			this.play = function(){
+				console.log('game');
+			};
+		}
+		
+		var stu = new Student('Tom',10,'男','SH');
+		
+		console.log(stu);
+	</script>
+</body>
+</html>

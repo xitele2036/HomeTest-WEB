@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			1.在文档中直接使用this，this代表window对象
+			2.如果在全局变量或全局函数前面使用this，this代表window对象
+			3.如果是HTML事件处理程序，那么将this作为事件处理函数实参，传递给事件处理函数，this代表应用事件的元素
+			4.如果是DOM0级事件处理程序，事件处理程序中的this代表应用事件的元素
+			5.如果是DOM2级事件处理程序，事件处理程序中的this代表应用事件的元素
+			6.在字面量形式创建的对象中，如果将this方式方法内，这个this代表的是当前的字面量对象
+			7.如果在构造方法中，如果将this放在属性名称前面，这个this代表的是该构造方法创建出来的对象，如果将this放在某个函数中，那么这个this代表调用该函数的对象
+			8.如果将this放在原型中，他代表的是使用该原型的内容的对象
+			9.在借用构造方法继承时，call中的this代表的是下级构造方法创建的对象
+			10.如果在闭包中使用this，this代表window
+			11.间隔调用和延迟调用中的this指向window
+			12.自执行函数this指向window
+		*/
+	</script>
+</body>
+</html>

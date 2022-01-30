@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		function Person(name,age,gender){
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			
+			this.study = function(){
+				console.log('web');
+			};
+			
+			this.play = function(){
+				console.log('game');
+			}
+		}
+		
+		var per = new Person('Tom',10,'男')
+		
+		console.log(per);
+	</script>
+</body>
+</html>

@@ -6,5 +6,42 @@
 </head>
 
 <body>
+	<script>
+		/*
+			注意：在使用二分查找法对数组进行查找时，数组必须
+		*/
+		
+		var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+		
+		//定义一个方法，该方法作用就是利用二分法查找法，在数组中查找指定元素，将元素的下标返回
+		function fn(myArr,key){
+			//定义变量，该变量是指向数组的开头和结尾
+			var begin = 0;
+			var end = arr.length - 1;
+			
+//			console.log(low,high);
+			
+			while(begin <= end){
+				  //获取中间值下标
+			var mid = parseInt((begin + end) / 2);
+			
+			//将要查找的元素和中间值进行比较
+			if(key == myArr[mid]){
+				return mid;
+			}else if(key < myArr[mid]){
+				end = mid - 1;
+			}else if(key > myArr[mid]){
+				begin = mid + 1;
+			}else{
+				return -1;
+			}
+			};
+			
+			
+		};
+		
+		var res = fn(arr,5);
+		console.log(res);
+	</script>
 </body>
 </html>

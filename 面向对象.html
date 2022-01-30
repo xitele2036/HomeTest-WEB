@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			面向过程：指在完成某个需求之前，先分析完成该需求所需要经历的步骤有哪些，然后按照步骤依次执行即可，面向过程重在过程，C语言就是典型的面向过程的语言
+			面向对象：指在完成某个需求之前，先分析完成该需求所涉及到的对象有哪些，然后再分析每个对象身上有哪些属性和方法，利用这些属性和方法完成相应的需求，JAVA，C++都是面向对象的语言，JS是一门基于对象的语言
+			
+			1.什么是对象：指具有特定功能的无序的属性和方法的结合
+			2.如何创建对象：字面量形式，构造方法
+		*/
+		
+//		构造方法定义格式
+//		function 构造方法名称(){
+//			this.属性名称 = 属性值;
+//			this.属性名称 = 属性值;
+//			this.属性名称 = 属性值;
+//			
+//			this.方法名称 = function(){
+//				//XXXXXXX
+//			};
+//			
+//			this.方法名称 = function(){
+//				//XXXXXXX
+//			}
+//		}
+		
+		//构造方法的调用：new 构造方法名称(实参1，实参2，实参3，实参4);
+		
+		//自定义构造方法，功能是创建对象-student对象
+		
+		function Student(name,age,gender,id){
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			this.id = id;
+			
+			this.study = function(){
+				console.log('web');
+			};
+			
+			this.play = function(){
+				console.log('game');
+			}
+		}
+		
+		var stu = new Student('Tom',10,'男','SH')
+		
+		console.log(stu);
+	</script>
+</body>
+</html>

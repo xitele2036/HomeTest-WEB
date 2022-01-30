@@ -1,0 +1,15 @@
+{
+	"name" : "Tom",
+	"age":10,
+	"gender":"男"，
+	"brothers":[
+		{
+			"name":"Jack",
+			"age":15
+		}
+		{
+			"name":"Jason",
+			"age":25
+		}
+	]
+}

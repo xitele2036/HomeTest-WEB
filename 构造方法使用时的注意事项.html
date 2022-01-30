@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			构造方法使用时的注意事项:
+			1.构造方法的名称的首字母要大写，目的是和普通的方法做区别
+			2.构造方法的名称代表了对象的类型
+			3.调用时必须加new
+			4.构造方法中为对象绑定的属性为对象的私有属性
+		*/
+		
+		
+		function Student(name,age,gender,id){
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			this.id = id;
+			
+			this.study = function(){
+				console.log('web');
+			};
+			
+			this.play = function(){
+				console.log('game');
+			}
+		}
+		
+		var stu = new Student('Tom',10,'男','SH')
+		
+		console.log(stu);
+	</script>
+</body>
+</html>

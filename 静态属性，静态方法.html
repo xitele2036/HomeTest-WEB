@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			静态属性和静态方法:就是给构造方法直接绑定属性和方法
+		*/
+		
+		function Persion(name,age){
+			this.name = name;
+			this.age = age;
+			
+//			this.a = 100;
+		}
+		
+		//静态属性
+		Persion.a = 100;
+		//静态方法
+		Persion.fn = function(){
+			console.log('hello');
+		};
+		
+		
+		var p = new Persion('tom',100);
+//		console.log(p.fn);
+		
+		console.log(Persion.fn());
+		
+	</script>
+</body>
+</html>

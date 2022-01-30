@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		/*
+			parse方法:
+			1.作用：将JSON字符串转换为JS对象
+			2.格式：window.JSON.parse('JSON字符串');
+			
+			stringify方法:
+			1.作用：将JS对象转换为JSON字符串
+			2.格式：JSON.stringify(JS对象);
+		*/
+		var data = '{"name":"Tom","age":10,"gender":"男"}';
+		
+		
+		//将data数据转换为JS对象
+		var obj = JSON.parse(data);
+		
+		console.log(obj);
+		
+		//将JS对象转换为JSON字符串
+		var data2 = JSON.stringify(obj);
+		
+		console.log(data2);
+	</script>
+</body>
+</html>
